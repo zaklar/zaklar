@@ -7,43 +7,68 @@
 <title>Switch Games - Zaklar</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header>
+<!-- HEADER -->
+<header class="switch-header">
 
-<h1>SWITCH</h1>
-<p>Nintendo Switch Games</p>
+  <div class="switch-title">
+    <img src="https://www.vhv.rs/dpng/d/613-6132028_nintendo-switch-logo-hd-png-download.png" class="switch-logo">
+    <h1>SWITCH <span class="heart">♡</span></h1>
+  </div>
 
-<!-- optional: search here too -->
-<input 
-type="text" 
-id="search"
-placeholder="Search games..."
->
+  <p>Nintendo Switch Games</p>
+
+  <input 
+    type="text" 
+    id="search"
+    placeholder="Search games..."
+  >
 
 </header>
 
 
+<!-- GAMES SECTION -->
 <section class="games">
 
-<h2>Switch Games</h2>
+  <h2>Switch Games</h2>
 
-<div class="game-grid">
+  <div class="game-grid" id="gameList">
 
-<!-- GAMESSSSS -->
-<div class="game-card" data-name="Virche Evermore Error Salvation">
-  <img src="assets/game-covers/virche.jpg">
-  <h3>Virche Evermore - Error Salvation</h3>
-  <p>Nintendo Switch</p>
-</div>
+    <!-- GAME 1 -->
+    <div class="game-card">
+      <img src="https://static.wikia.nocookie.net/english-otome-games/images/8/83/Shuuen_no_Virche.jpg/revision/latest?cb=20220703055122">
+      <h3>Virche Evermore - Error Salvation</h3>
+      <p>Switch</p>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
-<script src="script.js"></script>
+
+<!-- SEARCH SCRIPT -->
+<script>
+const searchInput = document.getElementById("search");
+const games = document.querySelectorAll(".game-card");
+
+searchInput.addEventListener("keyup", function () {
+  const value = this.value.toLowerCase();
+
+  games.forEach(game => {
+    const title = game.querySelector("h3").textContent.toLowerCase();
+
+    if (title.includes(value)) {
+      game.style.display = "block";
+    } else {
+      game.style.display = "none";
+    }
+  });
+});
+</script>
 
 </body>
 </html>
