@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Otome Library</title>
+</head>
+<body>
+
+<h1>Otome Library 🎀</h1>
+
+<input type="text" id="search" placeholder="Search games...">
+
+<ul id="gameList">
+  <li>Amnesia Memories</li>
+  <li>Nightshade</li>
+  <li>Diabolik Lovers</li>
+</ul>
+
+<script>
+const search = document.getElementById("search");
+const list = document.getElementById("gameList").getElementsByTagName("li");
+
+search.addEventListener("keyup", function() {
+  const filter = search.value.toLowerCase();
+  for (let i = 0; i < list.length; i++) {
+    const txt = list[i].textContent.toLowerCase();
+    list[i].style.display = txt.includes(filter) ? "" : "none";
+  }
+});
+</script>
+
+</body>
+</html>
