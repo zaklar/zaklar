@@ -1,32 +1,156 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Otome Library</title>
+<title>ZAKLAR - VNS ARCHIVE 💘</title>
+
+<style>
+body {
+    background: linear-gradient(to right, #2b1055, #7597de);
+    font-family: Arial;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #ffb6e6;
+}
+
+p {
+    color: #ddd;
+}
+
+.category {
+    margin-top: 40px;
+}
+
+.category h2 {
+    color: #ffd6f6;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game {
+    background: rgba(0,0,0,0.3);
+    margin: 10px;
+    padding: 15px;
+    width: 180px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.game:hover {
+    transform: scale(1.05);
+    background: rgba(0,0,0,0.6);
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    background: #ff77aa;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff4d88;
+}
+</style>
 </head>
+
 <body>
 
-<h1>Otome Library 🎀</h1>
+<h1>ZAKLAR - VNS ARCHIVE 💘</h1>
+<p>Your personal visual novel library ✨</p>
 
-<input type="text" id="search" placeholder="Search games...">
+<!-- PSVITA -->
+<div class="category">
+<h2>🎮 PSVITA</h2>
+<div class="container">
 
-<ul id="gameList">
-  <li>Amnesia Memories</li>
-  <li>Nightshade</li>
-  <li>Diabolik Lovers</li>
-</ul>
+<div class="game">
+<h3>Collar x Malice</h3>
+<button onclick="window.location.href='collar.html'">Open</button>
+</div>
 
-<script>
-const search = document.getElementById("search");
-const list = document.getElementById("gameList").getElementsByTagName("li");
+<div class="game">
+<h3>Code: Realize</h3>
+<button onclick="window.location.href='code.html'">Open</button>
+</div>
 
-search.addEventListener("keyup", function() {
-  const filter = search.value.toLowerCase();
-  for (let i = 0; i < list.length; i++) {
-    const txt = list[i].textContent.toLowerCase();
-    list[i].style.display = txt.includes(filter) ? "" : "none";
-  }
-});
-</script>
+</div>
+</div>
+
+<!-- PSP -->
+<div class="category">
+<h2>🎮 PSP</h2>
+<div class="container">
+
+<div class="game">
+<h3>Amnesia</h3>
+<button onclick="window.location.href='amnesia.html'">Open</button>
+</div>
+
+</div>
+</div>
+
+<!-- SWITCH -->
+<div class="category">
+<h2>🎮 Nintendo Switch</h2>
+<div class="container">
+
+<div class="game">
+<h3>Piofiore</h3>
+<button onclick="window.location.href='piofiore.html'">Open</button>
+</div>
+
+</div>
+</div>
+
+<!-- NDS -->
+<div class="category">
+<h2>🎮 Nintendo DS</h2>
+<div class="container">
+
+<div class="game">
+<h3>Tokimeki Memorial</h3>
+<button onclick="window.location.href='toki.html'">Open</button>
+</div>
+
+</div>
+</div>
+
+<!-- 3DS -->
+<div class="category">
+<h2>🎮 Nintendo 3DS</h2>
+<div class="container">
+
+<div class="game">
+<h3>Story of Seasons</h3>
+<button onclick="window.location.href='sos.html'">Open</button>
+</div>
+
+</div>
+</div>
+
+<!-- ENGLISH PATCHES -->
+<div class="category">
+<h2>🌐 English Patches</h2>
+<div class="container">
+
+<div class="game">
+<h3>Diabolik Lovers (ENG)</h3>
+<button onclick="window.location.href='dialovers.html'">Open</button>
+</div>
+
+</div>
+</div>
 
 </body>
 </html>
