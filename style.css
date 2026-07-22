@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 
 *{
@@ -14,7 +14,7 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    color:#7a2450;
+    color:#9b4668;
 
     overflow-x:hidden;
 
@@ -22,78 +22,79 @@ body{
     background:
 
     radial-gradient(
-        circle at top,
-        #ffd6e8 0%,
+        circle at top left,
+        #ffffff,
         transparent 35%
     ),
 
     radial-gradient(
-        circle at bottom,
-        #ffb6d5,
+        circle at bottom right,
+        #ffc8dc,
         transparent 40%
     ),
 
     linear-gradient(
         135deg,
-        #fff0f6,
-        #ffd1e3,
-        #ffb7d3
+        #fff8fb,
+        #ffeaf2,
+        #ffd9e8
     );
 
 }
 
 
 
-/* floating soft glow */
+/* soft floating glow */
 
 body::before{
 
-    content:"♡";
+    content:"";
 
     position:fixed;
 
-
-    font-size:500px;
-
-
-    color:#ffffff;
+    width:500px;
+    height:500px;
 
 
-    opacity:.25;
+    background:#ffb7d2;
 
 
+    filter:blur(130px);
+
+
+    opacity:.35;
+
+
+    top:-200px;
     right:-150px;
-
-    top:-100px;
 
 
     animation:
+    floatGlow 8s infinite alternate;
 
-    float 8s infinite alternate;
 
-
-    pointer-events:none;
+    z-index:-1;
 
 }
 
 
 
-@keyframes float{
+@keyframes floatGlow{
 
     from{
 
-        transform:translateY(0);
+        transform:translate(0,0);
 
     }
 
-
     to{
 
-        transform:translateY(80px);
+        transform:translate(-120px,120px);
 
     }
 
 }
+
 
 
 
@@ -113,7 +114,7 @@ header{
 
     animation:
 
-    fade .8s ease;
+    fadeIn 1s ease;
 
 
 }
@@ -125,34 +126,31 @@ header h1{
 
     font-family:
 
-    'Playfair Display',
+    'Cormorant Garamond',
     serif;
+
 
 
     font-size:
 
-    clamp(60px,12vw,100px);
+    clamp(70px,12vw,110px);
 
 
 
     letter-spacing:
 
-    15px;
+    18px;
 
 
 
-    color:#d94f91;
+    color:#d86b98;
 
 
 
     text-shadow:
 
+    0 10px 30px rgba(216,107,152,.25);
 
-    0 8px 20px rgba(217,79,145,.25);
-
-
-
-    position:relative;
 
 
 }
@@ -162,16 +160,13 @@ header h1{
 header h1::after{
 
 
-    content:"🎀";
-
-
-    position:absolute;
+    content:" ♡";
 
 
     font-size:45px;
 
 
-    margin-left:15px;
+    color:#ff9fc2;
 
 
 }
@@ -183,16 +178,16 @@ header h1::after{
 header p{
 
 
-    color:#a94370;
+    margin-top:10px;
 
 
     font-size:18px;
 
 
-    letter-spacing:3px;
+    letter-spacing:4px;
 
 
-    margin-top:10px;
+    color:#bb6587;
 
 
 }
@@ -203,7 +198,7 @@ header p{
 
 
 
-/* SEARCH BAR */
+/* SEARCH */
 
 
 #search{
@@ -213,7 +208,6 @@ header p{
 
 
     width:min(600px,90%);
-
 
 
     padding:
@@ -230,24 +224,23 @@ header p{
 
     border:
 
-    2px solid #ffc1db;
+    2px solid #ffd0df;
 
 
 
     background:
 
-
-    rgba(255,255,255,.65);
+    rgba(255,255,255,.75);
 
 
 
     backdrop-filter:
 
-    blur(15px);
+    blur(20px);
 
 
 
-    color:#9c3568;
+    color:#a94f73;
 
 
     font-size:16px;
@@ -261,7 +254,7 @@ header p{
     box-shadow:
 
 
-    0 15px 40px rgba(217,79,145,.15);
+    0 15px 40px rgba(220,120,160,.2);
 
 
 
@@ -274,11 +267,10 @@ header p{
 
 #search::placeholder{
 
-
-    color:#d98aaa;
-
+    color:#d69ab1;
 
 }
+
 
 
 
@@ -287,18 +279,18 @@ header p{
 
     transform:
 
-    scale(1.05);
+    scale(1.04);
 
 
 
-    border-color:#e85c9c;
+    border-color:#ed8caf;
 
 
 
     box-shadow:
 
 
-    0 20px 60px rgba(232,92,156,.3);
+    0 20px 60px rgba(220,100,150,.35);
 
 
 }
@@ -309,7 +301,17 @@ header p{
 
 
 
-/* TITLES */
+/* SECTIONS */
+
+
+section{
+
+    padding:
+
+    45px 8%;
+
+}
+
 
 
 section h2{
@@ -320,17 +322,18 @@ section h2{
 
     font-family:
 
-    'Playfair Display',
+    'Cormorant Garamond',
     serif;
 
 
 
     font-size:
 
-    42px;
+    45px;
 
 
-    color:#c93d7c;
+    color:#cf628d;
+
 
 
     margin-bottom:
@@ -345,7 +348,9 @@ section h2{
 
 
 
-/* CATEGORY BOXES */
+
+
+/* CATEGORY GRID */
 
 
 .category-grid{
@@ -356,15 +361,16 @@ section h2{
 
     grid-template-columns:
 
-    repeat(auto-fit,minmax(190px,1fr));
+    repeat(auto-fit,minmax(200px,1fr));
 
 
     gap:
 
-    25px;
+    30px;
 
 
 }
+
 
 
 
@@ -403,11 +409,11 @@ section h2{
 
     linear-gradient(
 
-    145deg,
+        145deg,
 
-    rgba(255,255,255,.8),
+        #ffffff,
 
-    rgba(255,182,211,.65)
+        #ffeaf2
 
     );
 
@@ -415,32 +421,37 @@ section h2{
 
     border:
 
-    2px solid rgba(255,255,255,.8);
+    2px solid rgba(255,255,255,.9);
 
 
 
     box-shadow:
 
 
-    0 20px 50px rgba(200,80,130,.2);
+    0 20px 50px rgba(220,120,160,.18);
 
 
 
-    color:#b83272;
+    color:#c45b85;
 
 
 
     font-family:
 
-    'Playfair Display',
+    'Cormorant Garamond',
     serif;
 
 
 
-    font-size:28px;
+    font-size:
+
+    32px;
 
 
-    font-weight:bold;
+
+    font-weight:
+
+    700;
 
 
 
@@ -448,8 +459,7 @@ section h2{
 
 
 
-    transition:.5s;
-
+    transition:.45s;
 
 
 }
@@ -474,10 +484,11 @@ section h2{
     font-size:35px;
 
 
-    color:#ff8fbd;
+    color:#ffabc8;
 
 
 }
+
 
 
 
@@ -486,18 +497,15 @@ section h2{
 
     transform:
 
-
     translateY(-15px)
-
-    rotate(-2deg);
+    scale(1.04);
 
 
 
     box-shadow:
 
 
-    0 30px 70px rgba(200,80,130,.35);
-
+    0 35px 70px rgba(220,100,150,.35);
 
 
 }
@@ -521,25 +529,27 @@ section h2{
     height:100%;
 
 
+    top:0;
+
+
+    left:-200%;
+
+
+
     background:
 
 
     linear-gradient(
 
-    120deg,
+        120deg,
 
-    transparent,
+        transparent,
 
-    rgba(255,255,255,.8),
+        rgba(255,255,255,.9),
 
-    transparent
+        transparent
 
     );
-
-
-
-    left:-200%;
-
 
 
 }
@@ -555,6 +565,8 @@ section h2{
 
 
 }
+
+
 
 
 
@@ -585,12 +597,34 @@ section h2{
 /* GAME CARDS */
 
 
+.game-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(220px,1fr));
+
+
+    gap:
+
+    30px;
+
+
+}
+
+
+
+
+
 .game-card{
 
 
     background:
 
-    rgba(255,255,255,.65);
+    rgba(255,255,255,.8);
 
 
 
@@ -615,7 +649,7 @@ section h2{
     box-shadow:
 
 
-    0 15px 40px rgba(200,80,130,.2);
+    0 20px 45px rgba(220,120,160,.18);
 
 
 
@@ -638,7 +672,7 @@ section h2{
     box-shadow:
 
 
-    0 25px 60px rgba(200,80,130,.35);
+    0 30px 70px rgba(220,100,150,.35);
 
 
 }
@@ -666,16 +700,20 @@ section h2{
 .game-card h3{
 
 
-    color:#bd3978;
-
-
     margin-top:15px;
 
 
     font-family:
 
-    'Playfair Display',
+    'Cormorant Garamond',
     serif;
+
+
+
+    font-size:25px;
+
+
+    color:#c95d87;
 
 
 }
@@ -687,7 +725,7 @@ section h2{
 .game-card p{
 
 
-    color:#d878a1;
+    color:#d48ba7;
 
 
 }
@@ -696,33 +734,34 @@ section h2{
 
 
 
-/* cute floating particles */
+
+
+
+/* FLOATING DECORATIONS */
 
 
 body::after{
 
 
-    content:"✦  ♡  ✧  ♡";
+    content:"♡  ✦  ♡  ✧";
 
 
     position:fixed;
 
 
-    top:20%;
+    left:40px;
 
 
-    left:5%;
+    top:35%;
 
 
-
-    font-size:30px;
-
+    font-size:35px;
 
 
     color:white;
 
 
-    opacity:.5;
+    opacity:.7;
 
 
 
@@ -735,7 +774,6 @@ body::after{
 
 
 
-
 @keyframes sparkle{
 
 
@@ -745,7 +783,8 @@ body::after{
 
         translateY(30px);
 
-        opacity:.9;
+
+        opacity:1;
 
     }
 
@@ -756,7 +795,9 @@ body::after{
 
 
 
-@keyframes fade{
+
+
+@keyframes fadeIn{
 
 
     from{
@@ -788,7 +829,7 @@ body::after{
 
     header h1{
 
-        letter-spacing:6px;
+        letter-spacing:8px;
 
     }
 
