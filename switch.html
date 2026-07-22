@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,62 +13,87 @@
 
 <body>
 
-<!-- HEADER -->
 <header class="switch-header">
 
-  <div class="switch-title">
-    <img src="https://img.icons8.com/ios_filled/512/F25081/nintendo-switch-logo.png">
-    <h1>SWITCH <span class="heart">♡</span></h1>
-  </div>
+    <div class="switch-title">
 
-  <p>Nintendo Switch Games</p>
+        <img 
+            class="switch-logo"
+            src="https://img.icons8.com/ios_filled/512/F25081/nintendo-switch-logo.png"
+            alt="Nintendo Switch Logo"
+        >
 
-  <input 
-    type="text" 
-    id="search"
-    placeholder="Search games..."
-  >
+        <h1>
+            SWITCH <span class="heart">♡</span>
+        </h1>
+
+    </div>
+
+    <p class="switch-subtitle">
+        Nintendo Switch Games
+    </p>
+
+    <input 
+        class="search-bar"
+        type="text"
+        id="search"
+        placeholder="Search games..."
+    >
 
 </header>
 
 
-<!-- GAMES SECTION -->
 <section class="games">
 
-  <h2>Switch Games</h2>
+    <h2>Switch Games</h2>
 
-  <div class="game-grid" id="gameList">
+    <div class="game-grid" id="gameList">
 
-    <!-- GAME 1 -->
-    <div class="game-card">
-      <img src="https://static.wikia.nocookie.net/english-otome-games/images/8/83/Shuuen_no_Virche.jpg/revision/latest?cb=20220703055122">
-      <h3>Virche Evermore - Error Salvation</h3>
-      <p>Switch</p>
+        <div class="game-card">
+
+            <img 
+                src="https://static.wikia.nocookie.net/english-otome-games/images/8/83/Shuuen_no_Virche.jpg/revision/latest?cb=20220703055122"
+                alt="Virche Evermore Error Salvation"
+            >
+
+            <h3>
+                Virche Evermore - Error Salvation
+            </h3>
+
+            <p>
+                Switch
+            </p>
+
+        </div>
+
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- SEARCH SCRIPT -->
 <script>
+
 const searchInput = document.getElementById("search");
 const games = document.querySelectorAll(".game-card");
 
-searchInput.addEventListener("keyup", function () {
-  const value = this.value.toLowerCase();
+searchInput.addEventListener("input", () => {
 
-  games.forEach(game => {
-    const title = game.querySelector("h3").textContent.toLowerCase();
+    const searchValue = searchInput.value.toLowerCase();
 
-    if (title.includes(value)) {
-      game.style.display = "block";
-    } else {
-      game.style.display = "none";
-    }
-  });
+    games.forEach(game => {
+
+        const title = game.querySelector("h3")
+            .textContent
+            .toLowerCase();
+
+        game.style.display = title.includes(searchValue)
+            ? ""
+            : "none";
+
+    });
+
 });
+
 </script>
 
 </body>
