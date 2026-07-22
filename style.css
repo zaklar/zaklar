@@ -843,3 +843,157 @@ body::after{
 
 
 }
+
+.discord-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(
+    135deg,
+    #2a1f28,
+    #3a2734
+  );
+
+  border-top: 2px solid #ff8ec8;
+
+  backdrop-filter: blur(12px);
+
+  padding: 16px 24px;
+
+  z-index: 9999;
+
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.35);
+
+  animation: slideUp 0.6s ease;
+}
+
+
+/* layout */
+.discord-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* logo */
+.discord-logo {
+  width: 38px;
+  height: 38px;
+
+  filter: drop-shadow(0 0 6px rgba(255, 140, 200, 0.6));
+}
+
+
+/* text */
+.discord-text {
+  flex: 1;
+  line-height: 1.5;
+
+  font-size: 15.5px;
+  color: #f7dbea;
+}
+
+.discord-text strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: #ffb3d6;
+}
+
+
+/* JOIN BUTTON */
+.discord-join-btn {
+  background: linear-gradient(
+    135deg,
+    #ff6fb5,
+    #ff3f9f
+  );
+
+  color: white;
+
+  padding: 11px 28px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 8px 25px rgba(255, 80, 150, 0.4);
+
+  transition: 0.25s;
+}
+
+.discord-join-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+
+  box-shadow: 0 12px 35px rgba(255, 80, 150, 0.6);
+}
+
+
+/* CLOSE BUTTON */
+.discord-close-btn {
+  background: none;
+  border: none;
+
+  color: #e8c6d7;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.discord-close-btn:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+
+/* OPTIONAL CHARACTER */
+.bar-character {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+
+  height: 90px;
+
+  pointer-events: none;
+
+  opacity: 0.9;
+
+  transform: translateY(10px);
+}
+
+
+/* animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+  .discord-content {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .bar-character {
+    display: none;
+  }
+}
