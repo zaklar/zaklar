@@ -2,9 +2,9 @@
 
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 
@@ -14,7 +14,7 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    color:white;
+    color:#7a2450;
 
     overflow-x:hidden;
 
@@ -22,76 +22,74 @@ body{
     background:
 
     radial-gradient(
-        circle at 15% 10%,
-        rgba(255,150,210,.35),
-        transparent 30%
+        circle at top,
+        #ffd6e8 0%,
+        transparent 35%
     ),
 
     radial-gradient(
-        circle at 85% 80%,
-        rgba(255,80,170,.25),
-        transparent 35%
+        circle at bottom,
+        #ffb6d5,
+        transparent 40%
     ),
 
     linear-gradient(
         135deg,
-        #090009,
-        #210018,
-        #3b002d
+        #fff0f6,
+        #ffd1e3,
+        #ffb7d3
     );
 
 }
 
 
 
-/* floating pink glow */
+/* floating soft glow */
 
 body::before{
 
-    content:"";
+    content:"♡";
 
     position:fixed;
 
-    width:450px;
-    height:450px;
+
+    font-size:500px;
 
 
-    background:#ff7fbd;
-
-
-    filter:blur(160px);
+    color:#ffffff;
 
 
     opacity:.25;
 
 
-    top:-150px;
-    left:-150px;
+    right:-150px;
+
+    top:-100px;
 
 
     animation:
-    floatingGlow 10s infinite alternate;
+
+    float 8s infinite alternate;
 
 
-    z-index:-1;
+    pointer-events:none;
 
 }
 
 
-@keyframes floatingGlow{
+
+@keyframes float{
 
     from{
 
-        transform:
-        translate(0,0);
+        transform:translateY(0);
 
     }
 
 
     to{
 
-        transform:
-        translate(300px,200px);
+        transform:translateY(80px);
 
     }
 
@@ -110,12 +108,13 @@ header{
 
     padding:
 
-    90px 20px 50px;
+    90px 20px 60px;
 
 
     animation:
 
-    fadeIn 1.2s ease;
+    fade .8s ease;
+
 
 }
 
@@ -132,71 +131,51 @@ header h1{
 
     font-size:
 
-    clamp(55px,10vw,90px);
+    clamp(60px,12vw,100px);
+
 
 
     letter-spacing:
 
-    12px;
+    15px;
 
 
 
-    background:
-
-    linear-gradient(
-        90deg,
-        #ffffff,
-        #ff9dcc,
-        #ffffff
-    );
-
-
-    background-size:
-
-    200%;
-
-
-    -webkit-background-clip:text;
-
-    color:transparent;
+    color:#d94f91;
 
 
 
-    animation:
+    text-shadow:
 
-    textGlow 5s infinite;
 
+    0 8px 20px rgba(217,79,145,.25);
+
+
+
+    position:relative;
 
 
 }
 
 
 
-@keyframes textGlow{
+header h1::after{
 
 
-    0%{
-
-        background-position:0%;
-
-    }
+    content:"🎀";
 
 
-    50%{
-
-        background-position:100%;
-
-    }
+    position:absolute;
 
 
-    100%{
+    font-size:45px;
 
-        background-position:0%;
 
-    }
+    margin-left:15px;
 
 
 }
+
 
 
 
@@ -204,16 +183,16 @@ header h1{
 header p{
 
 
-    margin-top:10px;
-
-
-    color:#ffd5ea;
+    color:#a94370;
 
 
     font-size:18px;
 
 
-    letter-spacing:2px;
+    letter-spacing:3px;
+
+
+    margin-top:10px;
 
 
 }
@@ -223,7 +202,8 @@ header p{
 
 
 
-/* SEARCH */
+
+/* SEARCH BAR */
 
 
 #search{
@@ -235,9 +215,10 @@ header p{
     width:min(600px,90%);
 
 
+
     padding:
 
-    18px 25px;
+    18px 30px;
 
 
 
@@ -249,23 +230,24 @@ header p{
 
     border:
 
-    1px solid rgba(255,180,220,.5);
+    2px solid #ffc1db;
 
 
 
     background:
 
-    rgba(255,255,255,.12);
+
+    rgba(255,255,255,.65);
 
 
 
     backdrop-filter:
 
-    blur(20px);
+    blur(15px);
 
 
 
-    color:white;
+    color:#9c3568;
 
 
     font-size:16px;
@@ -279,7 +261,7 @@ header p{
     box-shadow:
 
 
-    0 0 30px rgba(255,120,190,.25);
+    0 15px 40px rgba(217,79,145,.15);
 
 
 
@@ -289,11 +271,15 @@ header p{
 }
 
 
+
 #search::placeholder{
 
-    color:#ffd3e8;
+
+    color:#d98aaa;
+
 
 }
+
 
 
 #search:focus{
@@ -305,10 +291,14 @@ header p{
 
 
 
+    border-color:#e85c9c;
+
+
+
     box-shadow:
 
 
-    0 0 50px rgba(255,120,190,.6);
+    0 20px 60px rgba(232,92,156,.3);
 
 
 }
@@ -318,21 +308,14 @@ header p{
 
 
 
-/* SECTIONS */
 
-
-section{
-
-
-    padding:
-
-    40px 8%;
-
-
-}
+/* TITLES */
 
 
 section h2{
+
+
+    text-align:center;
 
 
     font-family:
@@ -341,17 +324,18 @@ section h2{
     serif;
 
 
+
     font-size:
 
-    38px;
+    42px;
+
+
+    color:#c93d7c;
 
 
     margin-bottom:
 
-    30px;
-
-
-    color:#ffd8eb;
+    35px;
 
 
 }
@@ -361,7 +345,7 @@ section h2{
 
 
 
-/* CATEGORY GRID */
+/* CATEGORY BOXES */
 
 
 .category-grid{
@@ -384,18 +368,18 @@ section h2{
 
 
 
-
-
 .category{
 
 
-    height:160px;
+    height:170px;
+
 
 
     display:flex;
 
 
     justify-content:center;
+
 
     align-items:center;
 
@@ -410,11 +394,7 @@ section h2{
 
     border-radius:
 
-    25px;
-
-
-
-    cursor:pointer;
+    35px;
 
 
 
@@ -423,11 +403,11 @@ section h2{
 
     linear-gradient(
 
-        145deg,
+    145deg,
 
-        rgba(255,255,255,.18),
+    rgba(255,255,255,.8),
 
-        rgba(255,120,190,.08)
+    rgba(255,182,211,.65)
 
     );
 
@@ -435,82 +415,44 @@ section h2{
 
     border:
 
-    1px solid rgba(255,180,220,.35);
-
-
-
-    backdrop-filter:
-
-    blur(20px);
+    2px solid rgba(255,255,255,.8);
 
 
 
     box-shadow:
 
 
-    0 20px 40px rgba(0,0,0,.35);
+    0 20px 50px rgba(200,80,130,.2);
 
 
 
-    font-size:22px;
-
-
-    font-weight:600;
-
-
-    letter-spacing:1px;
+    color:#b83272;
 
 
 
-    transition:
+    font-family:
 
-    .5s;
+    'Playfair Display',
+    serif;
 
 
-    animation:
 
-    cardAppear .8s backwards;
+    font-size:28px;
+
+
+    font-weight:bold;
+
+
+
+    cursor:pointer;
+
+
+
+    transition:.5s;
+
 
 
 }
-
-
-
-.category:nth-child(2){
-
-    animation-delay:.1s;
-
-}
-
-
-.category:nth-child(3){
-
-    animation-delay:.2s;
-
-}
-
-
-.category:nth-child(4){
-
-    animation-delay:.3s;
-
-}
-
-
-.category:nth-child(5){
-
-    animation-delay:.4s;
-
-}
-
-
-.category:nth-child(6){
-
-    animation-delay:.5s;
-
-}
-
-
 
 
 
@@ -525,16 +467,14 @@ section h2{
 
     top:15px;
 
+
     right:20px;
-
-
-    color:#ffafd4;
 
 
     font-size:35px;
 
 
-    opacity:.5;
+    color:#ff8fbd;
 
 
 }
@@ -549,14 +489,14 @@ section h2{
 
     translateY(-15px)
 
-    scale(1.05);
+    rotate(-2deg);
 
 
 
     box-shadow:
 
 
-    0 30px 70px rgba(255,100,180,.35);
+    0 30px 70px rgba(200,80,130,.35);
 
 
 
@@ -575,7 +515,8 @@ section h2{
     position:absolute;
 
 
-    width:200%;
+    width:150%;
+
 
     height:100%;
 
@@ -585,13 +526,13 @@ section h2{
 
     linear-gradient(
 
-        120deg,
+    120deg,
 
-        transparent,
+    transparent,
 
-        rgba(255,255,255,.35),
+    rgba(255,255,255,.8),
 
-        transparent
+    transparent
 
     );
 
@@ -599,8 +540,6 @@ section h2{
 
     left:-200%;
 
-
-    transition:.8s;
 
 
 }
@@ -610,35 +549,30 @@ section h2{
 .category:hover::after{
 
 
-    left:100%;
+    animation:
+
+    shine .8s;
 
 
 }
 
 
 
-
-
-@keyframes cardAppear{
+@keyframes shine{
 
 
     from{
 
-        opacity:0;
-
-        transform:
-
-        translateY(40px);
+        left:-200%;
 
     }
 
 
     to{
 
-        opacity:1;
+        left:200%;
 
     }
-
 
 }
 
@@ -651,46 +585,19 @@ section h2{
 /* GAME CARDS */
 
 
-.game-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-    repeat(auto-fit,minmax(220px,1fr));
-
-
-    gap:
-
-    30px;
-
-
-}
-
-
-
-
 .game-card{
 
 
     background:
 
-
-    rgba(255,255,255,.10);
-
-
-
-    border:
-
-    1px solid rgba(255,180,220,.25);
+    rgba(255,255,255,.65);
 
 
 
     border-radius:
 
-    25px;
+    30px;
+
 
 
     padding:
@@ -699,9 +606,16 @@ section h2{
 
 
 
-    backdrop-filter:
+    border:
 
-    blur(15px);
+    2px solid white;
+
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(200,80,130,.2);
 
 
 
@@ -717,14 +631,14 @@ section h2{
 
     transform:
 
-    translateY(-10px);
+    translateY(-12px);
 
 
 
     box-shadow:
 
 
-    0 25px 60px rgba(255,100,180,.35);
+    0 25px 60px rgba(200,80,130,.35);
 
 
 }
@@ -738,18 +652,13 @@ section h2{
     width:100%;
 
 
-    aspect-ratio:3/4;
-
-
-    object-fit:cover;
-
-
     border-radius:
 
-    18px;
+    25px;
 
 
 }
+
 
 
 
@@ -757,22 +666,28 @@ section h2{
 .game-card h3{
 
 
+    color:#bd3978;
+
+
     margin-top:15px;
 
 
-    color:#ffe0ef;
+    font-family:
+
+    'Playfair Display',
+    serif;
 
 
 }
+
+
+
 
 
 .game-card p{
 
 
-    color:#ffb9d7;
-
-
-    font-size:14px;
+    color:#d878a1;
 
 
 }
@@ -781,62 +696,39 @@ section h2{
 
 
 
-/* BUTTON STYLE IF NEEDED */
+/* cute floating particles */
 
 
-button{
+body::after{
 
 
-    background:
-
-    linear-gradient(
-
-        90deg,
-
-        #ff78b9,
-
-        #ffb6dc
-
-    );
+    content:"✦  ♡  ✧  ♡";
 
 
-    border:none;
+    position:fixed;
 
 
-    padding:
-
-    14px 30px;
+    top:20%;
 
 
-    border-radius:
+    left:5%;
 
-    40px;
+
+
+    font-size:30px;
+
 
 
     color:white;
 
 
-    cursor:pointer;
-
-
-    transition:.3s;
-
-
-}
+    opacity:.5;
 
 
 
-button:hover{
+    animation:
 
-
-    transform:
-
-    scale(1.08);
-
-
-    box-shadow:
-
-    0 0 30px #ff78b9;
+    sparkle 5s infinite;
 
 
 }
@@ -844,8 +736,51 @@ button:hover{
 
 
 
+@keyframes sparkle{
 
-/* MOBILE */
+
+    50%{
+
+        transform:
+
+        translateY(30px);
+
+        opacity:.9;
+
+    }
+
+
+}
+
+
+
+
+
+@keyframes fade{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(-30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+
 
 
 @media(max-width:600px){
@@ -853,21 +788,15 @@ button:hover{
 
     header h1{
 
-        letter-spacing:5px;
+        letter-spacing:6px;
 
     }
 
-
-    section{
-
-        padding:30px 20px;
-
-    }
 
 
     .category{
 
-        height:130px;
+        height:140px;
 
     }
 
