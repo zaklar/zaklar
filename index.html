@@ -1,174 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>ZAKLAR - VNS ARCHIVE 🎀</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<title>Zaklar</title>
 
-<style>
-body {
-    background: linear-gradient(to right, #ffe4ec, #ffd6f6);
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    color: #5a2a3a;
-}
+<link rel="stylesheet" href="style.css">
 
-h1 {
-    margin-top: 30px;
-    font-size: 40px;
-}
-
-p {
-    margin-bottom: 30px;
-}
-
-.category {
-    margin-top: 50px;
-}
-
-.category h2 {
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.game {
-    background: white;
-    padding: 20px;
-    width: 170px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
-    transition: 0.3s;
-}
-
-.game:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
-}
-
-.game img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 10px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 15px;
-    background: #ff9ecb;
-    color: white;
-    cursor: pointer;
-    font-size: 13px;
-}
-
-button:hover {
-    background: #ff6fa5;
-}
-</style>
 </head>
 
 <body>
 
-<h1>ZAKLAR - VNS ARCHIVE 🎀</h1>
-<p>a soft little archive of visual novels ♡</p>
+<header>
 
-<!-- PSVITA -->
+<h1>ZAKLAR</h1>
+
+<p>Your gaming archive</p>
+
+<input 
+type="text" 
+id="search"
+placeholder="Search games..."
+>
+
+</header>
+
+
+<section class="categories">
+
+<h2>Categories</h2>
+
+<div class="category-grid">
+
 <div class="category">
-<h2>🎮 PSVITA</h2>
-<div class="container">
-
-<div class="game">
-<img src="https://via.placeholder.com/150">
-<h3>Collar x Malice</h3>
-<button onclick="window.location.href='collar.html'">open</button>
+PS Vita
 </div>
 
-<div class="game">
-<img src="https://via.placeholder.com/150">
-<h3>Code: Realize</h3>
-<button onclick="window.location.href='code.html'">open</button>
-</div>
-
-</div>
-</div>
-
-<!-- PSP -->
 <div class="category">
-<h2>🎮 PSP</h2>
-<div class="container">
-
-<div class="game">
-<img src="https://via.placeholder.com/150">
-<h3>Amnesia</h3>
-<button onclick="window.location.href='amnesia.html'">open</button>
+PSP
 </div>
 
-</div>
-</div>
-
-<!-- SWITCH -->
 <div class="category">
-<h2>🎮 Nintendo Switch</h2>
-<div class="container">
-
-<div class="game">
-<img src="https://via.placeholder.com/150">
-<h3>Piofiore</h3>
-<button onclick="window.location.href='piofiore.html'">open</button>
+PC Games
 </div>
 
-</div>
-</div>
-
-<!-- NDS -->
 <div class="category">
-<h2>🎮 Nintendo DS</h2>
-<div class="container">
-
-<div class="game">
-<img src="https://via.placeholder.com/150">
-<h3>Tokimeki Memorial</h3>
-<button onclick="window.location.href='toki.html'">open</button>
+Nintendo DS
 </div>
 
-</div>
-</div>
-
-<!-- 3DS -->
 <div class="category">
-<h2>🎮 Nintendo 3DS</h2>
-<div class="container">
-
-<div class="game">
-<img src="https://via.placeholder.com/150">
-<h3>Story of Seasons</h3>
-<button onclick="window.location.href='sos.html'">open</button>
+Nintendo Switch
 </div>
 
-</div>
-</div>
-
-<!-- ENGLISH PATCHES -->
 <div class="category">
-<h2>🌐 English Patches</h2>
-<div class="container">
-
-<div class="game">
-<img src="https://via.placeholder.com/150">
-<h3>Diabolik Lovers</h3>
-<button onclick="window.location.href='dialovers.html'">open</button>
+3DS
 </div>
 
+
 </div>
+
+</section>
+
+
+<section class="games">
+
+<h2>Latest Games</h2>
+
+
+<div class="game-grid">
+
+<div class="game-card">
+<img src="assets/game-covers/example.jpg">
+<h3>Game Name</h3>
+<p>PS Vita</p>
 </div>
+
+
+</div>
+
+</section>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
