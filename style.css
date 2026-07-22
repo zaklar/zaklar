@@ -997,3 +997,9 @@ body::after{
     display: none;
   }
 }
+
+.discord-sub {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-top: 2px;
+}
