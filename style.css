@@ -1005,71 +1005,202 @@ body::after{
 }
 
 /* SWITCH HEADER */
+
 .switch-header {
-  text-align: center;
-  padding: 60px 20px;
+    text-align:center;
+    padding:60px 20px;
 }
+
 
 .switch-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
 }
+
 
 .switch-logo {
-  width: 50px;
+
+    width:32px;
+
+    height:32px;
+
+    object-fit:contain;
+
 }
+
 
 .switch-title h1 {
-  font-size: 70px;
-  letter-spacing: 8px;
-  color: #d86a9b;
-  margin: 0;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:70px;
+
+    letter-spacing:8px;
+
+    color:#d86b98;
+
+    margin:0;
+
+    text-shadow:
+    0 10px 30px rgba(216,107,152,.25);
+
 }
 
-.heart {
-  font-size: 40px;
-  color: #f3a6c8;
-}
 
 .switch-header p {
-  margin-top: 10px;
-  color: #c07a9a;
-  letter-spacing: 2px;
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    letter-spacing:4px;
+
+    color:#bb6587;
+
 }
+
+
 
 /* GAME GRID */
+
 .game-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 25px;
-  padding: 30px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    padding:30px;
+
 }
+
 
 .game-card {
-  background: #fff;
-  border-radius: 14px;
-  padding: 15px;
-  text-align: center;
-  transition: 0.2s;
+
+    background:
+    rgba(255,255,255,.8);
+
+    border-radius:30px;
+
+    padding:15px;
+
+    text-align:center;
+
+    border:
+    2px solid white;
+
+    box-shadow:
+    0 20px 45px rgba(220,120,160,.18);
+
+    transition:.4s;
+
 }
+
 
 .game-card:hover {
-  transform: translateY(-5px);
+
+    transform:
+    translateY(-12px);
+
+    box-shadow:
+    0 30px 70px rgba(220,100,150,.35);
+
 }
+
 
 .game-card img {
-  width: 100%;
-  border-radius: 10px;
+
+    width:100%;
+
+    border-radius:25px;
+
 }
 
-/* SEARCH */
-#search {
-  margin-top: 30px;
-  padding: 14px 20px;
-  width: 300px;
-  border-radius: 30px;
-  border: none;
-  outline: none;
+
+.game-card h3 {
+
+    margin-top:15px;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:25px;
+
+    color:#c95d87;
+
 }
+
+
+.game-card p {
+
+    color:#d48ba7;
+
+}
+
+
+
+/* SEARCH */
+
+#search {
+
+    margin-top:35px;
+
+    width:min(600px,90%);
+
+    padding:18px 30px;
+
+    border-radius:50px;
+
+    border:2px solid #ffd0df;
+
+    background:
+    rgba(255,255,255,.75);
+
+    backdrop-filter:
+    blur(20px);
+
+    color:#a94f73;
+
+    font-size:16px;
+
+    outline:none;
+
+    box-shadow:
+    0 15px 40px rgba(220,120,160,.2);
+
+    transition:.4s;
+
+}
+
+
+#search::placeholder {
+
+    color:#d69ab1;
+
+}
+
+
+#search:focus {
+
+    transform:
+    scale(1.04);
+
+    border-color:#ed8caf;
+
+    box-shadow:
+    0 20px 60px rgba(220,100,150,.35);
+
+}
+
