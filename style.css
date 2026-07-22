@@ -1003,3 +1003,73 @@ body::after{
   opacity: 0.8;
   margin-top: 2px;
 }
+
+/* SWITCH HEADER */
+.switch-header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.switch-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.switch-logo {
+  width: 50px;
+}
+
+.switch-title h1 {
+  font-size: 70px;
+  letter-spacing: 8px;
+  color: #d86a9b;
+  margin: 0;
+}
+
+.heart {
+  font-size: 40px;
+  color: #f3a6c8;
+}
+
+.switch-header p {
+  margin-top: 10px;
+  color: #c07a9a;
+  letter-spacing: 2px;
+}
+
+/* GAME GRID */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.game-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* SEARCH */
+#search {
+  margin-top: 30px;
+  padding: 14px 20px;
+  width: 300px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
