@@ -61,19 +61,119 @@ placeholder="Search games..."
 </div> 
 
 </section>
+    
+<!-- Discord Bottom Banner -->
+<div id="discord-banner" class="discord-bottom-bar">
+  <div class="discord-content">
+    <!-- Discord Logo -->
+    <img src="https://upload.wikimedia.org/wikipedia/fr/6/6e/Discord_Logo.svg" 
+         alt="Discord" 
+         class="discord-logo">
 
+    <!-- Optional Character (you can replace the src) -->
+    <img src="https://ami.animecharactersdatabase.com/uploads/chars/82407-1531599195.png" 
+         alt="Character" 
+         class="discord-character">
 
-<div class="discord-bar">
-
-    <div class="bar-content">
-        <img src="assets/discord.png" class="discord-icon">
-        <span>Join our Discord server</span>
-        <a href="https://discord.gg/Wh6jYPsWf" target="_blank">Join</a>
+    <div class="discord-text">
+      <strong>Join our Discord community</strong><br>
+      — news, drops & chat.
     </div>
 
+    <a href="https://discord.gg/XdNVhAKhd" 
+       target="_blank" 
+       class="discord-join-btn">
+      Join
+    </a>
 
-    <img src="https://ami.animecharactersdatabase.com/uploads/chars/82407-1531599195.png" class="bar-character">
+    <button onclick="closeDiscordBanner()" class="discord-close-btn">✕</button>
+  </div>
+</div>
 
+<style>
+.discord-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #36393f; /* Discord dark color */
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.discord-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.discord-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.discord-character {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.discord-text {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.discord-join-btn {
+  background: #5865f2; /* Discord blue */
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.discord-join-btn:hover {
+  background: #4752c4;
+}
+
+.discord-close-btn {
+  background: none;
+  border: none;
+  color: #b9bbbe;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.discord-close-btn:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .discord-content {
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 12px;
+  }
+}
+</style>
+
+<script>
+function closeDiscordBanner() {
+  document.getElementById('discord-banner').style.display = 'none';
+}
+</script>
 </div>
 
 
