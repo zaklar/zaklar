@@ -7,7 +7,6 @@
 <title>Zaklar</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -37,7 +36,10 @@ placeholder="Search games..."
 <div class="category">PSP</div>
 <div class="category">PC Games</div>
 <div class="category">Nintendo DS</div>
-<div class="category">Nintendo Switch</div>
+
+<!-- ✅ FIXED: now clickable -->
+<a href="switch.html" class="category">Nintendo Switch</a>
+
 <div class="category">3DS</div>
 <div class="category">English Patches</div>
 
@@ -52,10 +54,11 @@ placeholder="Search games..."
 
 <div class="game-grid">
 
-<div class="game-card">
-<img src="assets/game-covers/example.jpg">
-<h3>Game Name</h3>
-<p>PS Vita</p>
+<!-- ✅ UPDATED GAME -->
+<div class="game-card" data-name="Virche Evermore Error Salvation">
+  <img src="https://static.wikia.nocookie.net/english-otome-games/images/8/83/Shuuen_no_Virche.jpg/revision/latest?cb=20220703055122">
+  <h3>Virche Evermore - Error Salvation</h3>
+  <p>Nintendo Switch</p>
 </div>
 
 </div> 
@@ -65,16 +68,17 @@ placeholder="Search games..."
 <!-- Discord Bottom Banner -->
 <div id="discord-banner" class="discord-bottom-bar">
   <div class="discord-content">
-    <!-- Discord Logo -->
+
     <img src="https://i.imgur.com/reBcdqJ.png" 
          alt="Discord" 
          class="discord-logo">
 
     <div class="discord-text">
-      <strong>Join our Discord community</strong><br>
-     <div class="discord-sub">
-  emulation tutorials, support and multilingual chat
-</div>
+      <strong>Join our Discord community</strong>
+
+      <div class="discord-sub">
+        emulation tutorials, support and multilingual chat
+      </div>
     </div>
 
     <a href="https://discord.gg/fAYxcb79xT" 
@@ -87,93 +91,11 @@ placeholder="Search games..."
   </div>
 </div>
 
-<style>
-.discord-bottom-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #2c2c2c;           
-  color: #ffffff;
-  padding: 14px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.25);
-  border-top: 3px solid #ff8ec8; 
-    }
-
-.discord-content {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  max-width: 1200px;
-  width: 100%;
-}
-
-.discord-logo {
-  width: 36px;
-  height: 36px;
-}
-
-.discord-text {
-  flex: 1;
-  font-size: 15.5px;
-  line-height: 1.4;
-  color: #f0f0f0;
-}
-
-.discord-join-btn {
-  background: #ff69b4;           
-  color: white;
-  padding: 10px 26px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-  transition: all 0.2s;
-  box-shadow: 0 3px 8px rgba(255, 105, 180, 0.3);
-}
-
-.discord-join-btn:hover {
-  background: #ff4da6;
-  transform: translateY(-2px);
-}
-
-.discord-close-btn {
-  background: none;
-  border: none;
-  color: #ddd;
-  font-size: 23px;
-  cursor: pointer;
-  padding: 0 10px;
-}
-
-.discord-close-btn:hover {
-  color: #fff;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .discord-content {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    gap: 12px;
-  }
-}
-</style>
-
 <script>
 function closeDiscordBanner() {
   document.getElementById('discord-banner').style.display = 'none';
 }
 </script>
-
-</script>
-</div>
-
 
 <script src="script.js"></script>
 
