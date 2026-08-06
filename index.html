@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zaklar | Visual Novels Archive</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <h1>ZAKLAR</h1>
+        <p>Visual Novels Archive</p>
+
+        <input
+            id="search"
+            type="search"
+            placeholder="Search games..."
+            aria-label="Search visual novels"
+        >
+    </header>
+
+    <main>
+
+        <section class="categories">
+            <h2>Categories</h2>
+
+            <nav class="category-grid" aria-label="Game Categories">
+                <div class="category">PS Vita</div>
+                <div class="category">PSP</div>
+                <div class="category">PC Games</div>
+                <div class="category">Nintendo DS</div>
+
+                <a href="switch.html" class="category">
+                    Nintendo Switch
+                </a>
+
+                <div class="category">Nintendo 3DS</div>
+                <div class="category">English Patches</div>
+            </nav>
+        </section>
+
+        <section class="games">
+            <h2>Latest Games</h2>
+
+            <div class="game-grid">
+
+                <article class="game-card" data-name="Virche Evermore Error Salvation">
+
+                    <img
+                        src="https://static.wikia.nocookie.net/english-otome-games/images/8/83/Shuuen_no_Virche.jpg/revision/latest?cb=20220703055122"
+                        alt="Virche Evermore - Error Salvation cover"
+                    >
+
+                    <h3>Virche Evermore - Error Salvation</h3>
+                    <p>Nintendo Switch</p>
+
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <aside id="discord-banner" class="discord-bottom-bar">
+
+        <div class="discord-content">
+
+            <img
+                src="https://i.imgur.com/reBcdqJ.png"
+                alt="Discord logo"
+                class="discord-logo"
+            >
+
+            <div class="discord-text">
+                <strong>Join our Discord community</strong>
+
+                <p class="discord-sub">
+                    Emulation tutorials, support and multilingual chat.
+                </p>
+            </div>
+
+            <a
+                href="https://discord.gg/fAYxcb79xT"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="discord-join-btn"
+            >
+                Join
+            </a>
+
+            <button
+                id="close-discord-banner"
+                class="discord-close-btn"
+                type="button"
+                aria-label="Close Discord banner"
+            >
+                ✕
+            </button>
+
+        </div>
+
+    </aside>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
