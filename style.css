@@ -514,3 +514,21 @@ section h2 {
     }
 
 }
+
+.game-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.game-link:hover {
+    color: inherit;
+}
+
+.game-link .game-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-link:hover .game-card {
+    transform: translateY(-4px);
+}
