@@ -12,7 +12,7 @@
 
     <title>Zaklar | Nintendo Switch</title>
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -70,19 +70,13 @@
                 downloads: {
 
                     japan: [
-
                         "https://send.now/2xdlos79maha",
-
                         "https://send.now/u9xdea015zv8"
-
                     ],
 
                     usa: [
-
                         "https://send.now/nxfd00nfvx4x",
-
                         "https://send.now/obmpfajwbns3"
-
                     ]
 
                 }
@@ -133,19 +127,13 @@
                 downloads: {
 
                     japan: [
-
                         "https://send.now/v1j5bpoftsgm",
-
                         "https://send.now/pzdxdr5mb1py"
-
                     ],
 
                     usa: [
-
                         "https://send.now/j3khh8lhpnn5",
-
                         "https://send.now/xrhpz1es5wqh"
-
                     ]
 
                 }
@@ -157,7 +145,8 @@
 
         function getGame() {
 
-            const params = new URLSearchParams(window.location.search);
+            const params =
+                new URLSearchParams(window.location.search);
 
             return params.get("game");
 
@@ -211,10 +200,13 @@
 
         function loadGame(game) {
 
-            document.title = `Zaklar | ${game.name}`;
+            document.title =
+                `Zaklar | ${game.name}`;
 
 
-            document.getElementById("game-container").innerHTML = `
+            document.getElementById(
+                "game-container"
+            ).innerHTML = `
 
                 <div class="switch-header">
 
@@ -289,9 +281,13 @@
 
                         <h2>Synopsis ♡</h2>
 
-                        ${game.synopsis.map(
-                            paragraph => `<p>${paragraph}</p>`
-                        ).join("")}
+                        ${game.synopsis
+                            .map(
+                                paragraph =>
+                                    `<p>${paragraph}</p>`
+                            )
+                            .join("")
+                        }
 
                     </section>
 
@@ -332,9 +328,13 @@
 
         } else {
 
-            document.title = "Zaklar | Nintendo Switch";
+            document.title =
+                "Zaklar | Nintendo Switch";
 
-            document.getElementById("game-container").innerHTML = `
+
+            document.getElementById(
+                "game-container"
+            ).innerHTML = `
 
                 <div class="switch-header">
 
