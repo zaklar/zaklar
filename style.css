@@ -48,39 +48,6 @@ body {
         );
 }
 
-body::before {
-    content: "";
-
-    position: fixed;
-    inset: auto;
-
-    width: 500px;
-    height: 500px;
-
-    top: -200px;
-    right: -150px;
-
-    background: #ffb7d2;
-    filter: blur(130px);
-    opacity: .35;
-
-    animation: floatGlow 8s infinite alternate;
-
-    z-index: -1;
-}
-
-@keyframes floatGlow {
-
-    from {
-        transform: translate(0, 0);
-    }
-
-    to {
-        transform: translate(-120px, 120px);
-    }
-
-}
-
 @keyframes fadeIn {
 
     from {
