@@ -114,5 +114,14 @@ closeButton?.addEventListener("click", () => {
 
 
 
+async function loadGames() {
 
-loadGames();
+    const response = await fetch("data/switch-games.json");
+
+    console.log(response);
+
+    const data = await response.json();
+
+    console.log(data);
+
+}
