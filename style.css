@@ -844,5 +844,56 @@ section h2 {
     .game-info {
         padding: 20px;
     }
+}
 
+.download-region {
+    margin-top: 30px;
+}
+
+.download-region h3 {
+    margin-bottom: 15px;
+
+    font-family: var(--font-heading);
+    font-size: 24px;
+
+    color: #c95d87;
+}
+
+.download-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.download-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 120px;
+    padding: 12px 24px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        135deg,
+        #ff75b7,
+        #e85298
+    );
+
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+
+    box-shadow: 0 10px 30px rgba(220,90,150,.3);
+
+    transition:
+        transform .25s,
+        box-shadow .25s;
+}
+
+.download-links a:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 40px rgba(220,90,150,.45);
 }
