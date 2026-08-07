@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Zaklar | Nintendo Switch</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <div id="game-container"></div>
+
+
+    <script>
+
+        const games = {
+
+            "virche-error-salvation": {
+
+                title: "VIRCHE",
+
+                subtitle: "Error: Salvation",
+
+                name: "Virche Evermore -Error: Salvation-",
+
+                cover:
+                    "https://static.wikia.nocookie.net/english-otome-games/images/8/83/Shuuen_no_Virche.jpg",
+
+                alt:
+                    "Virche Evermore - Error: Salvation cover",
+
+                release: "2023",
+
+                platform: "Nintendo Switch",
+
+                developer: "Idea Factory",
+
+                publisher: "Aksys Games",
+
+                genre: "Otome • Visual Novel • Adventure",
+
+                tags: "Romance, Mystery, Dark Fantasy, Drama",
+
+                rating: "17+",
+
+                synopsis: [
+
+                    `In the isolated island nation of Arpéchéle, people are cursed
+                    to die at the age of 23. Known as the "God of Death," Ceres
+                    carries a mysterious curse that brings misfortune to those
+                    around her.`,
+
+                    `Surrounded by death and despair, Ceres encounters individuals
+                    connected to her fate while uncovering the hidden truths behind
+                    the island, her curse, and the mysterious organization seeking
+                    to change their inevitable destinies.`
+
+                ],
+
+                downloads: {
+
+                    japan: [
+
+                        "https://send.now/2xdlos79maha",
+
+                        "https://send.now/u9xdea015zv8"
+
+                    ],
+
+                    usa: [
+
+                        "https://send.now/nxfd00nfvx4x",
+
+                        "https://send.now/obmpfajwbns3"
+
+                    ]
+
+                }
+
+            },
+
+
+            "virche-epic-lycoris": {
+
+                title: "VIRCHE",
+
+                subtitle: "EpiC: lycoris",
+
+                name: "Virche Evermore -EpiC: lycoris-",
+
+                cover:
+                    "https://static.wikia.nocookie.net/english-otome-games/images/1/1d/Virche_Lycoris.jpg/revision/latest/scale-to-width-down/250?cb=20240201182848",
+
+                alt:
+                    "Virche Evermore - EpiC: lycoris cover",
+
+                release: "2024",
+
+                platform: "Nintendo Switch",
+
+                developer: "Idea Factory",
+
+                publisher: "Aksys Games",
+
+                genre: "Otome • Visual Novel • Adventure",
+
+                tags: "Romance, Mystery, Dark Fantasy, Drama",
+
+                rating: "17+",
+
+                synopsis: [
+
+                    `Return to the isolated island nation of Arpéchéle, where people
+                    are cursed to die at the age of 23.`,
+
+                    `<strong>Virche Evermore -EpiC: lycoris-</strong> expands the
+                    original story with new episodes, side stories, and additional
+                    perspectives that explore the fates of Ceres and the people
+                    connected to her.`
+
+                ],
+
+                downloads: {
+
+                    japan: [
+
+                        "https://send.now/v1j5bpoftsgm",
+
+                        "https://send.now/pzdxdr5mb1py"
+
+                    ],
+
+                    usa: [
+
+                        "https://send.now/j3khh8lhpnn5",
+
+                        "https://send.now/xrhpz1es5wqh"
+
+                    ]
+
+                }
+
+            }
+
+        };
+
+
+        function getGame() {
+
+            const params = new URLSearchParams(window.location.search);
+
+            return params.get("game");
+
+        }
+
+
+        function createDownloadRegion(flag, country, links) {
+
+            return `
+
+                <div class="download-region">
+
+                    <div class="download-header">
+
+                        <span class="flag">${flag}</span>
+
+                        <h3>${country}</h3>
+
+                    </div>
+
+
+                    <div class="download-links">
+
+                        <a
+                            class="download-button"
+                            href="${links[0]}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Part 1
+                        </a>
+
+
+                        <a
+                            class="download-button"
+                            href="${links[1]}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Part 2
+                        </a>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }
+
+
+        function loadGame(game) {
+
+            document.title = `Zaklar | ${game.name}`;
+
+
+            document.getElementById("game-container").innerHTML = `
+
+                <div class="switch-header">
+
+                    <div class="switch-title">
+
+                        <h1>${game.title}</h1>
+
+                    </div>
+
+                    <p>${game.subtitle}</p>
+
+                </div>
+
+
+                <section class="game-page">
+
+                    <div class="game-page-info">
+
+                        <img
+                            class="game-cover"
+                            src="${game.cover}"
+                            alt="${game.alt}"
+                            loading="lazy"
+                        >
+
+
+                        <div class="details">
+
+                            <h2>${game.name}</h2>
+
+                            <p>
+                                <strong>Release:</strong>
+                                ${game.release}
+                            </p>
+
+                            <p>
+                                <strong>Platform:</strong>
+                                ${game.platform}
+                            </p>
+
+                            <p>
+                                <strong>Developer:</strong>
+                                ${game.developer}
+                            </p>
+
+                            <p>
+                                <strong>Publisher:</strong>
+                                ${game.publisher}
+                            </p>
+
+                            <p>
+                                <strong>Genre:</strong>
+                                ${game.genre}
+                            </p>
+
+                            <p>
+                                <strong>Tags:</strong>
+                                ${game.tags}
+                            </p>
+
+                            <p>
+                                <strong>Age Rating:</strong>
+                                ${game.rating}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <section class="description">
+
+                        <h2>Synopsis ♡</h2>
+
+                        ${game.synopsis.map(
+                            paragraph => `<p>${paragraph}</p>`
+                        ).join("")}
+
+                    </section>
+
+
+                    <section class="download">
+
+                        <h2>Download</h2>
+
+                        ${createDownloadRegion(
+                            "🇯🇵",
+                            "Japan",
+                            game.downloads.japan
+                        )}
+
+                        ${createDownloadRegion(
+                            "🇺🇸",
+                            "USA",
+                            game.downloads.usa
+                        )}
+
+                    </section>
+
+                </section>
+
+            `;
+
+        }
+
+
+        const gameId = getGame();
+
+        const selectedGame = games[gameId];
+
+
+        if (selectedGame) {
+
+            loadGame(selectedGame);
+
+        } else {
+
+            document.title = "Zaklar | Nintendo Switch";
+
+            document.getElementById("game-container").innerHTML = `
+
+                <div class="switch-header">
+
+                    <div class="switch-title">
+
+                        <h1>VIRCHE</h1>
+
+                    </div>
+
+                    <p>Game not found</p>
+
+                </div>
+
+
+                <section class="game-page">
+
+                    <div class="game-page-info">
+
+                        <div class="details">
+
+                            <h2>Game not found</h2>
+
+                            <p>
+                                The requested game could not be found.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            `;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
