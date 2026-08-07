@@ -2,100 +2,75 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Zaklar | Nintendo Switch</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <header class="switch-header">
 
-        <div class="switch-title">
-            <img
-                class="switch-logo"
-                src="https://img.icons8.com/ios_filled/512/F25081/nintendo-switch-logo.png"
-                alt="Nintendo Switch logo"
-            >
+<header class="switch-header">
 
-            <h1>SWITCH</h1>
-        </div>
 
-        <p>Games</p>
+    <div class="switch-title">
 
-        <input
-            id="search"
-            type="search"
-            placeholder="Search games..."
-            aria-label="Search Nintendo Switch games"
-        >
+        <h1>
+            SWITCH
+        </h1>
 
-    </header>
+    </div>
 
-    <main>
 
-        <section class="games">
+    <p>
+        Games
+    </p>
 
-            <h2>Nintendo Switch Games</h2>
 
-            <div class="game-grid">
+    <input
+        id="search"
+        type="search"
+        placeholder="Search games..."
+        aria-label="Search Nintendo Switch games"
+    >
 
-                <a
-                    href="games/virche-error-salvation.html"
-                    class="game-link"
-                >
-                    <article
-                        class="game-card"
-                        data-name="Virche Evermore Error Salvation"
-                    >
-                        <img
-                            src="https://static.wikia.nocookie.net/english-otome-games/images/8/83/Shuuen_no_Virche.jpg/revision/latest?cb=20220703055122"
-                            alt="Virche Evermore - Error Salvation cover"
-                            loading="lazy"
-                        >
 
-                        <div class="game-info">
-                            <h3>Virche Evermore - Error Salvation</h3>
-                            <p>Nintendo Switch • 2022</p>
-                        </div>
-                    </article>
-                </a>
+</header>
 
-                <a
-                    href="games/virche-epic-lycoris.html"
-                    class="game-link"
-                >
-                    <article
-                        class="game-card"
-                        data-name="Virche Evermore Epic Lycoris"
-                    >
-                        <img
-                            src="https://www.aksysgames.com/epiclycoris/wp-content/uploads/sites/93/2024/04/VEEL_HERO.jpg"
-                            alt="Virche Evermore - Epic Lycoris cover"
-                            loading="lazy"
-                        >
 
-                        <div class="game-info">
-                            <h3>Virche Evermore - Epic Lycoris</h3>
-                            <p>Nintendo Switch • 2023</p>
-                        </div>
-                    </article>
-                </a>
 
-            </div>
 
-            <p id="no-results" hidden>
-                No Nintendo Switch games found.
-            </p>
+<main>
 
-        </section>
 
-    </main>
+<section class="games">
 
-    <script src="script.js"></script>
+
+    <div 
+        class="game-grid"
+        id="game-list"
+    >
+
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<script src="script.js"></script>
+
 
 </body>
 
