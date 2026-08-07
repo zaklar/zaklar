@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap");
 
 :root {
+
     --font-primary: "Poppins", sans-serif;
     --font-heading: "Cormorant Garamond", serif;
 
@@ -9,91 +10,138 @@
     --color-accent: #ff8ec8;
     --color-text: #9b4668;
 
-    --color-surface: rgba(255, 255, 255, .8);
-    --color-surface-light: rgba(255, 255, 255, .75);
+    --color-surface: rgba(255,255,255,.82);
+    --color-surface-light: rgba(255,255,255,.75);
 
     --color-border: #ffd0df;
 
-    --shadow-soft: 0 20px 45px rgba(220, 120, 160, .18);
-    --shadow-hover: 0 25px 55px rgba(220, 100, 150, .28);
+    --shadow-soft: 0 20px 45px rgba(220,120,160,.18);
+    --shadow-hover: 0 25px 55px rgba(220,100,150,.28);
 
     --transition: .3s ease;
+
+}
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+
 }
 
 body {
+
     min-height: 100vh;
+
     margin: 0;
 
     overflow-x: hidden;
 
     font-family: var(--font-primary);
+
     color: var(--color-text);
 
     background:
+
         radial-gradient(
             circle at top left,
             #ffffff,
             transparent 35%
         ),
+
         radial-gradient(
             circle at bottom right,
             #ffc8dc,
             transparent 40%
         ),
+
         linear-gradient(
             135deg,
             #fff8fb,
             #ffeaf2,
             #ffd9e8
         );
+
+}
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+a {
+
+    color: inherit;
+
 }
 
 @keyframes fadeIn {
+
     from {
+
         opacity: 0;
         transform: translateY(-25px);
+
     }
 
     to {
+
         opacity: 1;
         transform: translateY(0);
+
     }
+
 }
 
 @keyframes shine {
+
     from {
+
         left: -200%;
+
     }
 
     to {
+
         left: 200%;
+
     }
+
 }
 
 header {
+
     padding: 70px 20px 50px;
 
     text-align: center;
 
     animation: fadeIn .8s ease;
+
 }
 
 header h1 {
+
     margin: 0;
 
     font-family: var(--font-heading);
 
-    font-size: clamp(55px, 9vw, 85px);
+    font-size: clamp(55px,9vw,85px);
 
     letter-spacing: 10px;
 
     color: var(--color-primary);
 
     text-shadow:
-        0 10px 30px rgba(216, 107, 152, .25);
+        0 10px 30px rgba(216,107,152,.25);
+
 }
 
 header p {
+
     margin-top: 10px;
 
     font-size: 18px;
@@ -101,20 +149,22 @@ header p {
     letter-spacing: 4px;
 
     color: var(--color-secondary);
+
 }
 
 #search {
+
     display: block;
 
-    width: min(600px, 90%);
+    width: min(600px,90%);
 
-    margin: 35px auto 0;
+    margin: 35px auto;
 
     padding: 17px 28px;
 
     border: 2px solid var(--color-border);
 
-    border-radius: 50px;
+    border-radius: 999px;
 
     outline: none;
 
@@ -129,29 +179,37 @@ header p {
     backdrop-filter: blur(20px);
 
     box-shadow:
-        0 15px 40px rgba(220, 120, 160, .2);
+        0 15px 40px rgba(220,120,160,.2);
 
     transition: var(--transition);
+
 }
 
 #search::placeholder {
+
     color: #d69ab1;
+
 }
 
 #search:focus {
-    transform: scale(1.02);
 
     border-color: var(--color-accent);
 
+    transform: scale(1.02);
+
     box-shadow:
-        0 20px 55px rgba(220, 100, 150, .3);
+        0 20px 55px rgba(220,100,150,.3);
+
 }
 
 section {
+
     padding: 45px 8%;
+
 }
 
 section h2 {
+
     margin-bottom: 35px;
 
     text-align: center;
@@ -161,23 +219,27 @@ section h2 {
     font-size: 45px;
 
     color: #cf628d;
+
 }
 
 .category-grid {
+
     display: grid;
 
-    grid-template-columns:
-        repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
 
     gap: 30px;
+
 }
 
 .category {
+
     position: relative;
 
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     height: 170px;
@@ -189,14 +251,14 @@ section h2 {
     border-radius: 22px;
 
     background:
+
         linear-gradient(
             145deg,
             #ffffff,
             #ffeaf2
         );
 
-    box-shadow:
-        0 20px 45px rgba(220,120,160,.18);
+    box-shadow: var(--shadow-soft);
 
     color: #c45b85;
 
@@ -208,12 +270,12 @@ section h2 {
 
     text-decoration: none;
 
-    cursor: pointer;
-
     transition: var(--transition);
+
 }
 
 .category::after {
+
     content: "";
 
     position: absolute;
@@ -223,56 +285,110 @@ section h2 {
     left: -200%;
 
     width: 150%;
-    height: 100%;
 
     background:
+
         linear-gradient(
             120deg,
             transparent,
             rgba(255,255,255,.9),
             transparent
         );
+
 }
 
 .category:hover {
-    transform: translateY(-10px);
+
+    transform: translateY(-8px);
 
     box-shadow: var(--shadow-hover);
+
 }
 
 .category:hover::after {
+
     animation: shine .8s;
+
+}
+
+.switch-header {
+
+    padding: 60px 20px 30px;
+
+    text-align: center;
+
+}
+
+.switch-title {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.switch-title h1 {
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(52px,8vw,70px);
+
+    letter-spacing: 8px;
+
+    color: var(--color-primary);
+
+    text-shadow:
+        0 10px 30px rgba(216,107,152,.25);
+
+}
+
+.switch-header p {
+
+    margin: 10px 0 0;
+
+    font-size: 18px;
+
+    letter-spacing: 4px;
+
+    color: var(--color-secondary);
+
 }
 
 .game-grid {
+
     display: grid;
 
-    grid-template-columns:
-        repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill,minmax(220px,220px));
 
-    gap: 20px;
+    justify-content: center;
+
+    gap: 24px;
 
     max-width: 1200px;
 
-    margin: 0 auto;
+    margin: 40px auto;
 
     padding: 20px;
+
 }
 
 .game-link {
+
     display: block;
 
-    color: inherit;
-
     text-decoration: none;
+
 }
 
 .game-card {
+
     overflow: hidden;
-
-    padding: 10px;
-
-    text-align: left;
 
     border: 2px solid #fff;
 
@@ -285,56 +401,66 @@ section h2 {
     transition:
         transform var(--transition),
         box-shadow var(--transition);
+
 }
 
 .game-link:hover .game-card {
-    transform: translateY(-6px);
+
+    transform: translateY(-8px);
 
     box-shadow: var(--shadow-hover);
+
 }
 
 .game-card img {
-    display: block;
 
     width: 100%;
 
-    height: 190px;
-
-    border-radius: 14px;
+    aspect-ratio: 16 / 9;
 
     object-fit: cover;
 
-    object-position: center;
 }
 
 .game-info {
-    padding: 8px 4px 4px;
+
+    padding: 15px;
+
 }
 
 .game-card h3 {
+
     margin: 0;
 
     font-family: var(--font-heading);
 
-    font-size: 18px;
+    font-size: 21px;
 
-    line-height: 1.15;
+    line-height: 1.2;
 
     color: #c95d87;
+
 }
 
 .game-card p {
-    margin-top: 5px;
+
+    margin: 8px 0 0;
+
+    font-size: 13px;
 
     color: #d48ba7;
 
-    font-size: 11px;
 }
 
 .discord-bottom-bar {
+
     position: fixed;
 
-    inset: auto 0 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 9999;
 
     padding: 16px 24px;
 
@@ -352,12 +478,12 @@ section h2 {
     box-shadow:
         0 -10px 40px rgba(0,0,0,.35);
 
-    z-index: 9999;
-
     animation: slideUp .6s ease;
+
 }
 
 .discord-content {
+
     display: flex;
 
     align-items: center;
@@ -367,53 +493,65 @@ section h2 {
     max-width: 1200px;
 
     margin-inline: auto;
+
 }
 
 .discord-logo {
+
     width: 38px;
 
     height: 38px;
+
+    object-fit: contain;
 
     filter:
         drop-shadow(
             0 0 6px rgba(255,140,200,.6)
         );
+
 }
 
 .discord-text {
+
     flex: 1;
 
     color: #f7dbea;
 
-    font-size: 15.5px;
+    font-size: 15px;
 
     line-height: 1.5;
+
 }
 
 .discord-text strong {
+
     display: block;
+
+    margin-bottom: 3px;
 
     font-family: var(--font-heading);
 
-    font-size: 18px;
+    font-size: 19px;
 
     color: #ffb3d6;
+
 }
 
 .discord-sub {
-    margin-top: 2px;
+
+    opacity: .8;
 
     font-size: 13px;
 
-    opacity: .8;
 }
 
 .discord-join-btn {
+
     display: inline-flex;
 
-    align-items: center;
-
     justify-content: center;
+
+    align-items: center;
 
     padding: 11px 28px;
 
@@ -426,7 +564,7 @@ section h2 {
             #ff3f9f
         );
 
-    color: #fff;
+    color: white;
 
     text-decoration: none;
 
@@ -437,19 +575,21 @@ section h2 {
     box-shadow:
         0 8px 25px rgba(255,80,150,.4);
 
-    transition:
-        transform .25s,
-        box-shadow .25s;
+    transition: var(--transition);
+
 }
 
 .discord-join-btn:hover {
-    transform: translateY(-3px) scale(1.05);
+
+    transform: translateY(-3px);
 
     box-shadow:
         0 12px 35px rgba(255,80,150,.6);
+
 }
 
 .discord-close-btn {
+
     border: none;
 
     background: transparent;
@@ -460,147 +600,132 @@ section h2 {
 
     cursor: pointer;
 
-    transition:
-        color .2s,
-        transform .2s;
+    transition: var(--transition);
+
 }
 
 .discord-close-btn:hover {
-    color: #fff;
+
+    color: white;
 
     transform: scale(1.2);
+
 }
 
 @keyframes slideUp {
+
     from {
+
         opacity: 0;
+
         transform: translateY(100%);
+
     }
 
     to {
+
         opacity: 1;
+
         transform: translateY(0);
+
     }
-}
 
-.switch-header {
-    padding: 60px 20px;
-
-    text-align: center;
-}
-
-.switch-title {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 12px;
-}
-
-.switch-logo {
-    width: 32px;
-
-    height: 32px;
-
-    object-fit: contain;
-}
-
-.switch-title h1 {
-    margin: 0;
-
-    font-family: var(--font-heading);
-
-    font-size: 70px;
-
-    letter-spacing: 8px;
-
-    color: var(--color-primary);
-
-    text-shadow:
-        0 10px 30px rgba(216,107,152,.25);
-}
-
-.switch-header p {
-    margin-top: 10px;
-
-    font-size: 18px;
-
-    letter-spacing: 4px;
-
-    color: var(--color-secondary);
 }
 
 .game-page {
-    max-width: 1000px;
+
+    max-width: 1100px;
 
     margin: 0 auto;
 
-    padding: 40px 20px 100px;
+    padding: 50px 20px 100px;
+
 }
 
-.game-info {
+.game-page-info {
+
     display: flex;
+
     align-items: flex-start;
+
     gap: 40px;
 
-    max-width: 1000px;
-    margin: 0 auto;
     padding: 35px;
 
     border: 2px solid rgba(255,255,255,.9);
+
     border-radius: 35px;
 
     background: rgba(255,255,255,.72);
+
     backdrop-filter: blur(20px);
+
     box-shadow: var(--shadow-soft);
+
 }
 
 .game-cover {
+
     width: 280px;
+
     flex-shrink: 0;
 
     border-radius: 20px;
+
     object-fit: cover;
+
+    transition: var(--transition);
+
 }
 
 .game-cover:hover {
+
     transform: translateY(-5px);
+
 }
 
 .details {
+
     flex: 1;
+
     min-width: 0;
+
 }
 
 .details h2 {
-    margin-bottom: 25px;
+
+    margin: 0 0 25px;
 
     font-family: var(--font-heading);
 
-    font-size: 38px;
+    font-size: 40px;
 
-    line-height: 1.1;
+    line-height: 1.15;
 
     color: #c95d87;
+
 }
 
 .details p {
-    margin-bottom: 13px;
+
+    margin-bottom: 14px;
 
     font-size: 15px;
 
-    line-height: 1.5;
+    line-height: 1.7;
 
     color: #b65b7e;
+
 }
 
 .details strong {
+
     color: #9f4167;
+
 }
 
 .description {
+
     margin-top: 40px;
 
     padding: 35px 40px;
@@ -609,17 +734,17 @@ section h2 {
 
     border-radius: 30px;
 
-    background:
-        rgba(255,255,255,.72);
-
-    box-shadow:
-        var(--shadow-soft);
+    background: rgba(255,255,255,.72);
 
     backdrop-filter: blur(20px);
+
+    box-shadow: var(--shadow-soft);
+
 }
 
 .description h2 {
-    margin-bottom: 20px;
+
+    margin: 0 0 20px;
 
     text-align: left;
 
@@ -628,17 +753,23 @@ section h2 {
     font-size: 38px;
 
     color: #c95d87;
+
 }
 
 .description p {
-    font-size: 16px;
+
+    margin: 0;
 
     line-height: 1.9;
 
-    color: #9b4668;
+    font-size: 16px;
+
+    color: var(--color-text);
+
 }
 
 .download {
+
     margin-top: 40px;
 
     padding: 35px;
@@ -649,31 +780,33 @@ section h2 {
 
     border-radius: 30px;
 
-    background:
-        rgba(255,255,255,.72);
-
-    box-shadow:
-        var(--shadow-soft);
+    background: rgba(255,255,255,.72);
 
     backdrop-filter: blur(20px);
+
+    box-shadow: var(--shadow-soft);
+
 }
 
 .download h2 {
-    margin-bottom: 25px;
+
+    margin: 0 0 25px;
 
     font-family: var(--font-heading);
 
     font-size: 38px;
 
     color: #c95d87;
+
 }
 
 .download-button {
+
     display: inline-flex;
 
-    align-items: center;
-
     justify-content: center;
+
+    align-items: center;
 
     padding: 14px 38px;
 
@@ -697,236 +830,276 @@ section h2 {
     box-shadow:
         0 10px 30px rgba(220,90,150,.3);
 
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
+    transition: var(--transition);
+
 }
 
 .download-button:hover {
+
     transform: translateY(-4px);
 
     box-shadow:
         0 15px 40px rgba(220,90,150,.45);
+
+}
+
+@media (max-width: 1000px) {
+
+    .game-page-info {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+    .game-cover {
+
+        width: min(320px, 100%);
+
+    }
+
+    .details {
+
+        width: 100%;
+
+    }
+
+    .details h2 {
+
+        font-size: 34px;
+
+    }
+
 }
 
 @media (max-width: 768px) {
 
+    header {
+
+        padding: 50px 20px 35px;
+
+    }
+
+    header h1 {
+
+        font-size: 60px;
+
+        letter-spacing: 5px;
+
+    }
+
+    section {
+
+        padding: 35px 20px;
+
+    }
+
+    section h2 {
+
+        font-size: 34px;
+
+    }
+
+    .category-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .category {
+
+        height: 140px;
+
+        font-size: 28px;
+
+    }
+
+    .switch-header {
+
+        padding: 45px 20px 20px;
+
+    }
+
+    .switch-title h1 {
+
+        font-size: 52px;
+
+        letter-spacing: 5px;
+
+    }
+
+    .switch-header p {
+
+        font-size: 16px;
+
+        letter-spacing: 3px;
+
+    }
+
+    .game-grid {
+
+        grid-template-columns: repeat(auto-fill, minmax(180px, 180px));
+
+        gap: 18px;
+
+        padding: 15px;
+
+    }
+
+    .game-card h3 {
+
+        font-size: 18px;
+
+    }
+
+    .game-page {
+
+        padding: 35px 15px 90px;
+
+    }
+
+    .game-page-info {
+
+        padding: 25px;
+
+        gap: 25px;
+
+    }
+
+    .description,
+    .download {
+
+        padding: 25px;
+
+    }
+
+    .description h2,
+    .download h2 {
+
+        font-size: 30px;
+
+    }
+
     .discord-content {
+
         flex-wrap: wrap;
 
         justify-content: center;
 
         text-align: center;
+
+    }
+
+    .discord-text {
+
+        width: 100%;
+
     }
 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 480px) {
 
-    .game-page {
-        padding: 20px 18px 80px;
+    body {
+
+        font-size: 15px;
+
     }
 
-    .game-info {
-        flex-direction: column;
+    header h1 {
 
-        align-items: center;
+        font-size: 48px;
 
-        gap: 25px;
+        letter-spacing: 3px;
 
-        padding: 25px;
-
-        text-align: center;
     }
 
-    .game-cover {
-        width: 75%;
+    .switch-title h1 {
 
-        max-width: 280px;
+        font-size: 42px;
 
-        height: auto;
+        letter-spacing: 3px;
 
-        margin: auto;
+    }
+
+    #search {
+
+        width: 92%;
+
+        padding: 15px 22px;
+
+    }
+
+    .game-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 320px;
+
+    }
+
+    .game-card h3 {
+
+        font-size: 17px;
+
     }
 
     .details h2 {
-        font-size: 32px;
 
-        text-align: center;
-    }
+        font-size: 28px;
 
-    .details p {
-        font-size: 14px;
-    }
-
-    .description {
-        padding: 25px;
     }
 
     .description h2,
     .download h2 {
-        font-size: 32px;
+
+        font-size: 26px;
+
     }
 
-    .discord-bottom-bar {
-        padding: 14px 18px;
-    }
+    .download-button {
 
-    .discord-text {
-        font-size: 14px;
-    }
-
-    .discord-join-btn {
-        padding: 10px 22px;
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    header {
-        padding: 45px 15px 35px;
-    }
-
-    header h1 {
-        letter-spacing: 7px;
-    }
-
-    .switch-title h1 {
-        font-size: 52px;
-
-        letter-spacing: 5px;
-    }
-
-    .category {
-        height: 140px;
-
-        font-size: 28px;
-    }
-
-    .game-grid {
-        grid-template-columns:
-            repeat(2, minmax(0,1fr));
-
-        gap: 15px;
-
-        padding: 10px;
-    }
-
-    .game-card img {
-        height: 130px;
-    }
-
-    .game-card h3 {
-        font-size: 16px;
-    }
-
-}
-
-@media (max-width: 430px) {
-
-    .game-grid {
-        gap: 12px;
-    }
-
-    .game-card {
-        padding: 8px;
-    }
-
-    .game-card img {
-        height: 120px;
-    }
-
-    .game-card h3 {
-        font-size: 15px;
-    }
-
-    .game-info {
-        padding: 20px;
-    }
-
-}
-
-.download-region {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.download-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    min-width: 180px;
-}
-
-.flag {
-    font-size: 28px;
-    line-height: 1;
-}
-
-.download-header h3 {
-    margin: 0;
-
-    font-family: var(--font-heading);
-    font-size: 24px;
-
-    color: #c95d87;
-}
-
-.download-links {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.download-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-width: 120px;
-    padding: 12px 24px;
-
-    border-radius: 999px;
-
-    background: linear-gradient(
-        135deg,
-        #ff75b7,
-        #e85298
-    );
-
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-
-    box-shadow: 0 10px 30px rgba(220, 90, 150, .3);
-
-    transition:
-        transform .25s,
-        box-shadow .25s;
-}
-
-.download-links a:hover {
-    transform: translateY(-3px);
-
-    box-shadow: 0 15px 40px rgba(220, 90, 150, .45);
-}
-
-@media (max-width: 700px) {
-
-    .download-region {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .download-links {
         width: 100%;
-        justify-content: flex-start;
+
     }
+
+}
+
+.hidden {
+
+    display: none !important;
+
+}
+
+.center {
+
+    text-align: center;
+
+}
+
+.mt-20 {
+
+    margin-top: 20px;
+
+}
+
+.mt-40 {
+
+    margin-top: 40px;
+
+}
+
+.mb-20 {
+
+    margin-bottom: 20px;
+
+}
+
+.mb-40 {
+
+    margin-bottom: 40px;
 
 }
