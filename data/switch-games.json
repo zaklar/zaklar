@@ -1,18 +1,60 @@
 [
     {
         "id": "virche-error-salvation",
-        "title": "Virche Evermore - Error: Salvation",
+        "title": "VIRCHE",
+        "subtitle": "Error: Salvation",
+        "name": "Virche Evermore -Error: Salvation-",
         "platform": "Nintendo Switch",
         "year": 2023,
-        "genre": "Otome",
-        "cover": "https://static.wikia.nocookie.net/english-otome-games/images/8/83/Shuuen_no_Virche.jpg"
+        "developer": "Idea Factory",
+        "publisher": "Aksys Games",
+        "genre": "Otome • Visual Novel • Adventure",
+        "tags": "Romance, Mystery, Dark Fantasy, Drama",
+        "rating": "17+",
+        "cover": "https://static.wikia.nocookie.net/english-otome-games/images/8/83/Shuuen_no_Virche.jpg",
+        "alt": "Virche Evermore - Error: Salvation cover",
+        "synopsis": [
+            "In the isolated island nation of Arpéchéle, people are cursed to die at the age of 23. Known as the \"God of Death,\" Ceres carries a mysterious curse that brings misfortune to those around her.",
+            "Surrounded by death and despair, Ceres encounters individuals connected to her fate while uncovering the hidden truths behind the island, her curse, and the mysterious organization seeking to change their inevitable destinies."
+        ],
+        "downloads": {
+            "japan": [
+                "https://send.now/2xdlos79maha",
+                "https://send.now/u9xdea015zv8"
+            ],
+            "usa": [
+                "https://send.now/nxfd00nfvx4x",
+                "https://send.now/obmpfajwbns3"
+            ]
+        }
     },
     {
         "id": "virche-epic-lycoris",
-        "title": "Virche Evermore -EpiC: lycoris-",
+        "title": "VIRCHE",
+        "subtitle": "EpiC: lycoris",
+        "name": "Virche Evermore -EpiC: lycoris-",
         "platform": "Nintendo Switch",
         "year": 2024,
-        "genre": "Otome",
-        "cover": "https://static.wikia.nocookie.net/english-otome-games/images/1/1d/Virche_Lycoris.jpg/revision/latest/scale-to-width-down/250?cb=20240201182848"
+        "developer": "Idea Factory",
+        "publisher": "Aksys Games",
+        "genre": "Otome • Visual Novel • Adventure",
+        "tags": "Romance, Mystery, Dark Fantasy, Drama",
+        "rating": "17+",
+        "cover": "https://static.wikia.nocookie.net/english-otome-games/images/1/1d/Virche_Lycoris.jpg/revision/latest/scale-to-width-down/250?cb=20240201182848",
+        "alt": "Virche Evermore - EpiC: lycoris cover",
+        "synopsis": [
+            "Return to the isolated island nation of Arpéchéle, where people are cursed to die at the age of 23.",
+            "<strong>Virche Evermore -EpiC: lycoris-</strong> expands the original story with new episodes, side stories, and additional perspectives that explore the fates of Ceres and the people connected to her."
+        ],
+        "downloads": {
+            "japan": [
+                "https://send.now/v1j5bpoftsgm",
+                "https://send.now/pzdxdr5mb1py"
+            ],
+            "usa": [
+                "https://send.now/j3khh8lhpnn5",
+                "https://send.now/xrhpz1es5wqh"
+            ]
+        }
     }
 ]
