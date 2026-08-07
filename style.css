@@ -845,13 +845,6 @@ section h2 {
         padding: 20px;
     }
 
-    .download-region {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.download-links {
-    justify-content: flex-start;
 }
 
 .download-region {
@@ -873,6 +866,7 @@ section h2 {
 
 .flag {
     font-size: 28px;
+    line-height: 1;
 }
 
 .download-header h3 {
@@ -900,7 +894,11 @@ section h2 {
 
     border-radius: 999px;
 
-    background: linear-gradient(135deg, #ff75b7, #e85298);
+    background: linear-gradient(
+        135deg,
+        #ff75b7,
+        #e85298
+    );
 
     color: #fff;
     text-decoration: none;
@@ -908,7 +906,9 @@ section h2 {
 
     box-shadow: 0 10px 30px rgba(220, 90, 150, .3);
 
-    transition: .25s;
+    transition:
+        transform .25s,
+        box-shadow .25s;
 }
 
 .download-links a:hover {
@@ -918,6 +918,7 @@ section h2 {
 }
 
 @media (max-width: 700px) {
+
     .download-region {
         flex-direction: column;
         align-items: flex-start;
@@ -925,5 +926,7 @@ section h2 {
 
     .download-links {
         width: 100%;
+        justify-content: flex-start;
     }
+
 }
