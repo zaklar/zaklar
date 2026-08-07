@@ -69,22 +69,6 @@ body::before {
     z-index: -1;
 }
 
-body::after {
-    content: "♡ ✦ ♡ ✧";
-
-    position: fixed;
-
-    left: 40px;
-    top: 35%;
-
-    font-size: 35px;
-
-    color: white;
-    opacity: .7;
-
-    animation: sparkle 5s infinite;
-}
-
 @keyframes floatGlow {
 
     from {
@@ -93,15 +77,6 @@ body::after {
 
     to {
         transform: translate(-120px, 120px);
-    }
-
-}
-
-@keyframes sparkle {
-
-    50% {
-        transform: translateY(30px);
-        opacity: 1;
     }
 
 }
