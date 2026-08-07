@@ -542,45 +542,27 @@ section h2 {
 
 .game-info {
     display: flex;
-
     align-items: flex-start;
-
     gap: 40px;
 
-    max-width: 900px;
-
+    max-width: 1000px;
     margin: 0 auto;
-
     padding: 35px;
 
     border: 2px solid rgba(255,255,255,.9);
-
     border-radius: 35px;
 
-    background:
-        rgba(255,255,255,.72);
-
-    box-shadow:
-        var(--shadow-soft);
-
+    background: rgba(255,255,255,.72);
     backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-soft);
 }
 
 .game-cover {
     width: 280px;
-
-    height: 400px;
-
     flex-shrink: 0;
 
-    object-fit: cover;
-
     border-radius: 20px;
-
-    box-shadow:
-        0 20px 45px rgba(180,80,120,.25);
-
-    transition: var(--transition);
+    object-fit: cover;
 }
 
 .game-cover:hover {
@@ -589,6 +571,7 @@ section h2 {
 
 .details {
     flex: 1;
+    min-width: 0;
 }
 
 .details h2 {
