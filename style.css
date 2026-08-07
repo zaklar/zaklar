@@ -731,3 +731,35 @@ section h2 {
     }
 
 }
+
+.game-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px 100px;
+}
+
+.game-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.game-cover {
+    width: 280px;
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow-soft);
+
+    flex-shrink: 0;
+}
+
+.details {
+    flex: 1;
+}
