@@ -1,9 +1,6 @@
 const searchInput = document.getElementById("search");
 const gameList = document.getElementById("game-list");
 
-const discordBanner = document.getElementById("discord-banner");
-const closeButton = document.getElementById("close-discord-banner");
-
 let games = [];
 
 
@@ -13,7 +10,9 @@ async function loadGames() {
 
     try {
 
-        const response = await fetch("data/switch-games.json");
+        const response = await fetch(
+            "data/switch-games.json"
+        );
 
         if (!response.ok) {
             throw new Error(
@@ -36,18 +35,16 @@ async function loadGames() {
 
 function displayGames(gamesToShow) {
 
-    if (!gameList) return;
-
     gameList.innerHTML = "";
 
     gamesToShow.forEach(game => {
 
         const card = document.createElement("a");
 
+        card.className = "game-link";
+
         card.href =
             `switch-games.html?game=${encodeURIComponent(game.id)}`;
-
-        card.className = "game-link";
 
         card.innerHTML = `
 
@@ -55,13 +52,15 @@ function displayGames(gamesToShow) {
 
                 <img
                     src="${game.cover}"
-                    alt="${game.title} cover"
+                    alt="${game.alt}"
                     loading="lazy"
                 >
 
                 <div class="game-info">
 
-                    <h3>${game.title}</h3>
+                    <h3>
+                        ${game.name}
+                    </h3>
 
                     <p>
                         ${game.platform} • ${game.year}
@@ -80,33 +79,18 @@ function displayGames(gamesToShow) {
 }
 
 
-if (searchInput) {
+searchInput?.addEventListener("input", event => {
 
-    searchInput.addEventListener("input", (event) => {
+    const query =
+        event.target.value.trim().toLowerCase();
 
-        const query =
-            event.target.value.trim().toLowerCase();
+    const filteredGames = games.filter(game =>
+        game.name.toLowerCase().includes(query)
+    );
 
-        const filteredGames = games.filter(game =>
-            game.title.toLowerCase().includes(query)
-        );
+    displayGames(filteredGames);
 
-        displayGames(filteredGames);
-
-    });
-
-}
-
-
-if (closeButton) {
-
-    closeButton.addEventListener("click", () => {
-
-        discordBanner?.remove();
-
-    });
-
-}
+});
 
 
 loadGames();
