@@ -124,7 +124,7 @@
                     "url": "https://send.now/nooxriwcr0zd"
                 },
                 {
-                     "label": "Update v1.0.1",
+                    "label": "Update v1.0.1",
                     "url": "https://send.now/fux7to59t4yz"
                 }
             ],
@@ -196,48 +196,48 @@
         }
     },
     {
-    "id": "9-rip",
-    "title": "9 R.I.P.",
-    "subtitle": "",
-    "name": "9 R.I.P.",
-    "platform": "Nintendo Switch",
-    "year": 2024,
-    "developer": "Idea Factory / Design Factory",
-    "publisher": "Idea Factory International",
-    "genre": "Otome • Visual Novel • Horror",
-    "tags": "Romance, Horror, Supernatural, Urban Legend, Mystery",
-    "rating": "17+",
-    "cover": "https://ifi.games/ideawpapp/wp-content/uploads/2024/07/Jacket_960x1280_9RIP.png",
-    "alt": "9 R.I.P. cover",
-    "synopsis": [
-        "In this town, there is a long-standing rumor about people being spirited away… They also say that people with lots of anxiety or those who are struggling are more likely to get spirited away.",
-        "Misa Isshiki, a second-year high school student struggling with her future, hears a creepy voice one night: “Let us find your path. I am the one who will tempt you into the darkness.” From that point on, strange things begin to occur around her as she is drawn into school ghost stories, urban legends, and other realms filled with romance and danger."
-    ],
-    "downloads": {
-        "japan": [
-            {
-                "label": "Part 1",
-                "url": "https://send.now/ymiy7qxw8r0l"
-            },
-            {
-                "label": "Part 2",
-                "url": "https://send.now/1f1qxmsyelck"
-            },
-            {
-                "label": "Update v1.0.1",
-                "url": "https://send.now/qyzpuryzu4ml"
-            }
+        "id": "9-rip",
+        "title": "9 R.I.P.",
+        "subtitle": "",
+        "name": "9 R.I.P.",
+        "platform": "Nintendo Switch",
+        "year": 2024,
+        "developer": "Idea Factory / Design Factory",
+        "publisher": "Idea Factory International",
+        "genre": "Otome • Visual Novel • Horror",
+        "tags": "Romance, Horror, Supernatural, Urban Legend, Mystery",
+        "rating": "17+",
+        "cover": "https://ifi.games/ideawpapp/wp-content/uploads/2024/07/Jacket_960x1280_9RIP.png",
+        "alt": "9 R.I.P. cover",
+        "synopsis": [
+            "In this town, there is a long-standing rumor about people being spirited away… They also say that people with lots of anxiety or those who are struggling are more likely to get spirited away.",
+            "Misa Isshiki, a second-year high school student struggling with her future, hears a creepy voice one night: “Let us find your path. I am the one who will tempt you into the darkness.” From that point on, strange things begin to occur around her as she is drawn into school ghost stories, urban legends, and other realms filled with romance and danger."
         ],
-        "usa": [
-            {
-                "label": "Part 1",
-                "url": "https://send.now/oxo9k5j5swux"
-            },
-            {
-                "label": "Part 2",
-                "url": "https://send.now/lyj2dc1zbkeg"
-            }
-        ]
+        "downloads": {
+            "japan": [
+                {
+                    "label": "Part 1",
+                    "url": "https://send.now/ymiy7qxw8r0l"
+                },
+                {
+                    "label": "Part 2",
+                    "url": "https://send.now/1f1qxmsyelck"
+                },
+                {
+                    "label": "Update v1.0.1",
+                    "url": "https://send.now/qyzpuryzu4ml"
+                }
+            ],
+            "usa": [
+                {
+                    "label": "Part 1",
+                    "url": "https://send.now/oxo9k5j5swux"
+                },
+                {
+                    "label": "Part 2",
+                    "url": "https://send.now/lyj2dc1zbkeg"
+                }
+            ]
+        }
     }
-}
 ]
