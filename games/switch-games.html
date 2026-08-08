@@ -8,27 +8,22 @@
 </head>
 <body>
     <div id="game-container"></div>
-
     <script>
         function getGameId() {
             const params = new URLSearchParams(window.location.search);
             return params.get("game");
         }
-
         function createDownloadRegion(flag, country, links) {
             if (!links || links.length === 0) return "";
-
             const buttons = links.map(item => {
                 const label = typeof item === "string" ? "Download" : item.label;
-                const url   = typeof item === "string" ? item : item.url;
-
+                const url = typeof item === "string" ? item : item.url;
                 return `
                     <a class="download-button" href="${url}" target="_blank" rel="noopener noreferrer">
                         ${label}
                     </a>
                 `;
             }).join("");
-
             return `
                 <div class="download-region">
                     <div class="download-header">
@@ -41,10 +36,8 @@
                 </div>
             `;
         }
-
         function loadGame(game) {
             document.title = `Zaklar | ${game.name}`;
-
             document.getElementById("game-container").innerHTML = `
                 <div class="switch-header">
                     <div class="switch-title">
@@ -52,7 +45,6 @@
                     </div>
                     <p>${game.subtitle}</p>
                 </div>
-
                 <section class="game-page">
                     <div class="game-page-info">
                         <img
@@ -72,24 +64,21 @@
                             <p><strong>Age Rating:</strong> ${game.rating}</p>
                         </div>
                     </div>
-
                     <section class="description">
                         <h2>Synopsis ♡</h2>
                         ${game.synopsis.map(p => `<p>${p}</p>`).join("")}
                     </section>
-
                     <section class="download">
                         <h2>Download</h2>
                         ${createDownloadRegion("🇯🇵", "Japan", game.downloads.japan)}
                         ${createDownloadRegion("🇺🇸", "USA", game.downloads.usa)}
+                        ${createDownloadRegion("🇨🇳", "China", game.downloads.china)}
                     </section>
                 </section>
             `;
         }
-
         function showNotFound() {
             document.title = "Zaklar | Nintendo Switch";
-
             document.getElementById("game-container").innerHTML = `
                 <div class="switch-header">
                     <div class="switch-title">
@@ -97,7 +86,6 @@
                     </div>
                     <p>Game not found</p>
                 </div>
-
                 <section class="game-page">
                     <div class="game-page-info">
                         <div class="details">
@@ -108,25 +96,19 @@
                 </section>
             `;
         }
-
         async function init() {
             const gameId = getGameId();
-
             if (!gameId) {
                 showNotFound();
                 return;
             }
-
             try {
                 const response = await fetch("../data/switch-games.json");
-
                 if (!response.ok) {
                     throw new Error("Failed to load games data");
                 }
-
                 const games = await response.json();
                 const selectedGame = games.find(g => g.id === gameId);
-
                 if (selectedGame) {
                     loadGame(selectedGame);
                 } else {
@@ -137,7 +119,6 @@
                 showNotFound();
             }
         }
-
         init();
     </script>
 </body>
