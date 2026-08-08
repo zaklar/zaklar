@@ -18,58 +18,28 @@
         function createDownloadRegion(flag, country, links) {
             if (!links || links.length === 0) return "";
 
-            const normal = [];
-            const updates = [];
-
-            links.forEach(item => {
+            const buttons = links.map(item => {
                 const label = typeof item === "string" ? "Download" : item.label;
                 const url   = typeof item === "string" ? item : item.url;
 
-                if (label.toLowerCase().startsWith("update")) {
-                    // Keep only the version part (v1.0.1)
-                    const version = label.replace(/update\s*/i, "").trim() || label;
-                    updates.push({ label: version, url });
-                } else {
-                    normal.push({ label, url });
-                }
-            });
+                return `
+                    <a class="download-button" href="${url}" target="_blank" rel="noopener noreferrer">
+                        ${label}
+                    </a>
+                `;
+            }).join("");
 
-            let html = `
+            return `
                 <div class="download-region">
                     <div class="download-header">
                         <span class="flag">${flag}</span>
                         <h3>${country}</h3>
                     </div>
                     <div class="download-links">
-                        ${normal.map(item => `
-                            <a class="download-button" href="${item.url}" target="_blank" rel="noopener noreferrer">
-                                ${item.label}
-                            </a>
-                        `).join("")}
+                        ${buttons}
                     </div>
                 </div>
             `;
-
-            // Separate UPDATE section with the same flag
-            if (updates.length > 0) {
-                html += `
-                    <div class="download-region">
-                        <div class="download-header">
-                            <span class="flag">${flag}</span>
-                            <h3>UPDATE</h3>
-                        </div>
-                        <div class="download-links">
-                            ${updates.map(item => `
-                                <a class="download-button" href="${item.url}" target="_blank" rel="noopener noreferrer">
-                                    ${item.label}
-                                </a>
-                            `).join("")}
-                        </div>
-                    </div>
-                `;
-            }
-
-            return html;
         }
 
         function loadGame(game) {
