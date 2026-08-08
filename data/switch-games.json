@@ -139,5 +139,56 @@
                 }
             ]
         }
+    },
+    {
+        "id": "cupid-parasite-sweet-spicy",
+        "title": "CUPID",
+        "subtitle": "Parasite: Sweet & Spicy Darling",
+        "name": "Cupid Parasite: Sweet and Spicy Darling",
+        "platform": "Nintendo Switch",
+        "year": 2024,
+        "developer": "Idea Factory / Otomate",
+        "publisher": "Idea Factory International",
+        "genre": "Otome • Visual Novel • Romance",
+        "tags": "Romance, Comedy, Fantasy, Modern, Fan Disc",
+        "rating": "17+",
+        "cover": "https://ifi.games/ideawpapp/wp-content/uploads/2024/03/CPSSD_KeyArt.jpg",
+        "alt": "Cupid Parasite: Sweet and Spicy Darling cover",
+        "synopsis": [
+            "While working for Cupid Corporation, Cupid the goddess of love (known as Lynette Mirror on Earth) fell in love with one of her clients from the Parasite 5.",
+            "Now a new chapter begins. Return to Los York with the original cast plus a brand-new character, Merenice Levin. Experience After Drama routes, a New Parasite route, and Bonus Episodes as you choose between sweet and spicy decisions that shape the endings."
+        ],
+        "downloads": {
+            "japan": [
+                {
+                    "label": "Part 1",
+                    "url": "https://send.now/6bpv6kcu3e1s"
+                },
+                {
+                    "label": "Part 2",
+                    "url": "https://send.now/1h45chtrda74"
+                }
+            ],
+            "usa": [
+                {
+                    "label": "Part 1",
+                    "url": "https://send.now/pmr0eps3v7oq"
+                },
+                {
+                    "label": "Part 2",
+                    "url": "https://send.now/1uy6f8b9sgfk"
+                }
+            ],
+            "china": [
+                {
+                    "label": "Part 1",
+                    "url": "https://send.now/jit0gmqg6l9b"
+                },
+                {
+                    "label": "Part 2",
+                    "url": "https://send.now/owwkur48ixb4"
+                }
+            ]
+        }
     }
 ]
