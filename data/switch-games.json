@@ -19,12 +19,24 @@
         ],
         "downloads": {
             "japan": [
-                "https://send.now/2xdlos79maha",
-                "https://send.now/u9xdea015zv8"
+                {
+                    "label": "Part 1",
+                    "url": "https://send.now/2xdlos79maha"
+                },
+                {
+                    "label": "Part 2",
+                    "url": "https://send.now/u9xdea015zv8"
+                }
             ],
             "usa": [
-                "https://send.now/nxfd00nfvx4x",
-                "https://send.now/obmpfajwbns3"
+                {
+                    "label": "Part 1",
+                    "url": "https://send.now/nxfd00nfvx4x"
+                },
+                {
+                    "label": "Part 2",
+                    "url": "https://send.now/obmpfajwbns3"
+                }
             ]
         }
     },
@@ -48,12 +60,24 @@
         ],
         "downloads": {
             "japan": [
-                "https://send.now/v1j5bpoftsgm",
-                "https://send.now/pzdxdr5mb1py"
+                {
+                    "label": "Part 1",
+                    "url": "https://send.now/v1j5bpoftsgm"
+                },
+                {
+                    "label": "Part 2",
+                    "url": "https://send.now/pzdxdr5mb1py"
+                }
             ],
             "usa": [
-                "https://send.now/j3khh8lhpnn5",
-                "https://send.now/xrhpz1es5wqh"
+                {
+                    "label": "Part 1",
+                    "url": "https://send.now/j3khh8lhpnn5"
+                },
+                {
+                    "label": "Part 2",
+                    "url": "https://send.now/xrhpz1es5wqh"
+                }
             ]
         }
     },
