@@ -58,48 +58,48 @@
         }
     },
     {
-    "id": "cupid-parasite",
-    "title": "CUPID",
-    "subtitle": "Parasite",
-    "name": "Cupid Parasite",
-    "platform": "Nintendo Switch",
-    "year": 2021,
-    "developer": "Idea Factory / Otomate",
-    "publisher": "Idea Factory International",
-    "genre": "Otome • Visual Novel • Romance",
-    "tags": "Romance, Comedy, Fantasy, Modern",
-    "rating": "17+",
-    "cover": "https://ifi.games/ideawpapp/wp-content/uploads/2023/02/Jacket_960x1280_CP-1.png",
-    "alt": "Cupid Parasite cover",
-    "synopsis": [
-        "Welcome to Cupid Corporation! Located in the glamorous city of Los York, it is a high-end marriage agency known for its style and success rate.",
-        "Our heroine, Lynette Mirror, is the agency's top bridal advisor — and secretly the Goddess of Love, Cupid herself. Her biggest challenge yet? Helping the infamous \"Parasite 5\", a group of hopeless men, find true love through a reality TV show."
-    ],
-    "downloads": {
-        "japan": [
-            {
-                "label": "Part 1",
-                "url": "https://send.now/zpz9t7u1fi76"
-            },
-            {
-                "label": "Part 2",
-                "url": "https://send.now/nooxriwcr0zd"
-            }
+        "id": "cupid-parasite",
+        "title": "CUPID",
+        "subtitle": "Parasite",
+        "name": "Cupid Parasite",
+        "platform": "Nintendo Switch",
+        "year": 2021,
+        "developer": "Idea Factory / Otomate",
+        "publisher": "Idea Factory International",
+        "genre": "Otome • Visual Novel • Romance",
+        "tags": "Romance, Comedy, Fantasy, Modern",
+        "rating": "17+",
+        "cover": "https://ifi.games/ideawpapp/wp-content/uploads/2023/02/Jacket_960x1280_CP-1.png",
+        "alt": "Cupid Parasite cover",
+        "synopsis": [
+            "Welcome to Cupid Corporation! Located in the glamorous city of Los York, it is a high-end marriage agency known for its style and success rate.",
+            "Our heroine, Lynette Mirror, is the agency's top bridal advisor — and secretly the Goddess of Love, Cupid herself. Her biggest challenge yet? Helping the infamous \"Parasite 5\", a group of hopeless men, find true love through a reality TV show."
         ],
-        "usa": [
-            {
-                "label": "Part 1",
-                "url": "https://send.now/m11b8g8xw9in"
-            },
-            {
-                "label": "Part 2",
-                "url": "https://send.now/5ul2lpiq44or"
-            },
-            {
-                "label": "UPDATE v1.0.1",
-                "url": "https://send.now/fux7to59t4yz"
-            }
-        ]
+        "downloads": {
+            "japan": [
+                {
+                    "label": "Part 1",
+                    "url": "https://send.now/zpz9t7u1fi76"
+                },
+                {
+                    "label": "Part 2",
+                    "url": "https://send.now/nooxriwcr0zd"
+                }
+            ],
+            "usa": [
+                {
+                    "label": "Part 1",
+                    "url": "https://send.now/m11b8g8xw9in"
+                },
+                {
+                    "label": "Part 2",
+                    "url": "https://send.now/5ul2lpiq44or"
+                },
+                {
+                    "label": "UPDATE v1.0.1",
+                    "url": "https://send.now/fux7to59t4yz"
+                }
+            ]
+        }
     }
-}
 ]
