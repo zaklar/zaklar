@@ -23,7 +23,12 @@ async function loadGames() {
 function displayGames(gamesToShow) {
     gameList.innerHTML = "";
 
-    gamesToShow.forEach(game => {
+    // Sort alphabetically by name
+    const sorted = [...gamesToShow].sort((a, b) =>
+        a.name.localeCompare(b.name)
+    );
+
+    sorted.forEach(game => {
         const card = document.createElement("a");
         card.className = "game-link";
         card.href = `games/switch-games.html?game=${encodeURIComponent(game.id)}`;
