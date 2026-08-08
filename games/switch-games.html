@@ -16,6 +16,20 @@
         }
 
         function createDownloadRegion(flag, country, links) {
+            if (!links || links.length === 0) return "";
+
+            const buttons = links.map(item => {
+                // Supports both old format (string) and new format (object)
+                const label = typeof item === "string" ? "Download" : item.label;
+                const url   = typeof item === "string" ? item : item.url;
+
+                return `
+                    <a class="download-button" href="${url}" target="_blank" rel="noopener noreferrer">
+                        ${label}
+                    </a>
+                `;
+            }).join("");
+
             return `
                 <div class="download-region">
                     <div class="download-header">
@@ -23,12 +37,7 @@
                         <h3>${country}</h3>
                     </div>
                     <div class="download-links">
-                        <a class="download-button" href="${links[0]}" target="_blank" rel="noopener noreferrer">
-                            Part 1
-                        </a>
-                        <a class="download-button" href="${links[1]}" target="_blank" rel="noopener noreferrer">
-                            Part 2
-                        </a>
+                        ${buttons}
                     </div>
                 </div>
             `;
