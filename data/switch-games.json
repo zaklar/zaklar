@@ -239,5 +239,46 @@
                 }
             ]
         }
+    },
+    {
+    "id": "9-rip-sequel",
+    "title": "9 R.I.P.",
+    "subtitle": "sequel",
+    "name": "9 R.I.P. sequel",
+    "platform": "Nintendo Switch",
+    "year": 2025,
+    "developer": "Idea Factory / Design Factory",
+    "publisher": "Idea Factory International",
+    "genre": "Otome • Visual Novel • Horror",
+    "tags": "Romance, Horror, Supernatural, Fan Disc, Sequel",
+    "rating": "17+",
+    "cover": "https://ifi.games/9rips/img/ogp.jpg",
+    "alt": "9 R.I.P. sequel cover",
+    "synopsis": [
+        "Following the endings of 9 R.I.P., Misa Isshiki finds herself at a crossroads with navigating romantic life and the consequences of her actions during her second year of high school.",
+        "New challenges await depending on the route taken… Whether it’s grappling with the fallout of her death, or navigating a relationship with a supernatural being, Misa must come to terms with her decisions to move forward. Will she continue along the same path, or take another route entirely?"
+    ],
+    "downloads": {
+        "japan": [
+            {
+                "label": "Part 1",
+                "url": "https://send.now/5wzk5iaqprs2"
+            },
+            {
+                "label": "Part 2",
+                "url": "https://send.now/lyx31wa7o4hf"
+            }
+        ],
+        "china": [
+            {
+                "label": "Part 1",
+                "url": "https://send.now/w9iii72ohm8w"
+            },
+            {
+                "label": "Part 2",
+                "url": "https://send.now/y3q8wygi7azp"
+            }
+        ]
     }
+}
 ]
